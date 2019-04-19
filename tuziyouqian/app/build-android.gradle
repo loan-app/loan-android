@@ -9,7 +9,6 @@ def releaseTime() {
 
 android {
     compileSdkVersion rootProject.ext.android["compileSdkVersion"]
-    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
     defaultConfig {
         javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
 
