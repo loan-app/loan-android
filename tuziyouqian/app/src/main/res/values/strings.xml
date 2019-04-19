@@ -1,0 +1,62 @@
+<resources>
+    <string name="filter_vcode">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789</string>
+    <string name="home_page">首页</string>
+    <string name="found">发现</string>
+    <string name="mine">我的</string>
+    <string name="my_profile">我的资料</string>
+    <string name="record">记录</string>
+    <string name="bank_card">银行卡</string>
+    <string name="help_center">帮助中心</string>
+    <string name="more">更多</string>
+    <string name="phone_no">手机号</string>
+    <string name="next_step">下一步</string>
+    <string name="register">注册</string>
+    <string name="verification_code">验证码</string>
+    <string name="set_password">设置密码</string>
+    <string name="login">登录</string>
+    <string name="feedback_reminding">我们会认真处理您的反馈，尽快修复和完善相关功能。感谢您的关注和支持。</string>
+    <string name="feedback_success">反馈成功</string>
+    <string name="app_exit">再按一次退出程序</string>
+    <string-array name="education">
+        <item>博士</item>
+        <item>硕士</item>
+        <item>本科</item>
+        <item>大专</item>
+        <item>中专</item>
+        <item>高中</item>
+        <item>初中</item>
+        <item>初中以下</item>
+    </string-array>
+    <string-array name="liveTime">
+        <item>半年以内</item>
+        <item>半年到一年</item>
+        <item>一年以上</item>
+    </string-array>
+    <string-array name="liveMarrys">
+        <item>未婚</item>
+        <item>已婚未育</item>
+        <item>已婚已育</item>
+        <item>离异</item>
+    </string-array>
+    <string-array name="workTypes">
+        <item>上班族</item>
+        <item>自由职业</item>
+        <item>学生</item>
+    </string-array>
+    <string-array name="directContactNames">
+        <item>父亲</item>
+        <item>母亲</item>
+        <item>儿子</item>
+        <item>女儿</item>
+        <item>兄弟</item>
+        <item>姐妹</item>
+        <item>配偶</item>
+    </string-array>
+    <string-array name="othersContactNames">
+        <item>同学</item>
+        <item>亲戚</item>
+        <item>同事</item>
+        <item>朋友</item>
+        <item>其他</item>
+    </string-array>
+</resources>

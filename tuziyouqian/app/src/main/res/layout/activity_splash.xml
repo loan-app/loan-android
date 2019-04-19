@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!--    <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/DIMEN_344.0PX"
+            android:src="@mipmap/start_logo" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivLogo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/DIMEN_242.0PX" />-->
+
+    <ImageView
+        android:id="@+id/ivImage"
+        android:src="@mipmap/ic_splash"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/tv_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/DIMEN_20.0PX"
+        android:layout_marginTop="@dimen/DIMEN_60.0PX"
+        android:background="@drawable/round"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:padding="@dimen/DIMEN_13.0PX"
+        android:textColor="@color/color_f5f5f5"
+        android:textSize="@dimen/DIMEN_27.0PX"
+        android:visibility="invisible"/>
+</RelativeLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <com.mod.tuziyouqian.widget.TitleHeaderBar
+        android:id="@+id/mTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/DIMEN_74.0PX"
+            android:textColor="@color/color_333333"
+            android:text="请输入手机号登录/注册"
+            android:layout_marginTop="@dimen/DIMEN_128.0PX"
+            android:layout_marginBottom="@dimen/DIMEN_68.0PX"
+            android:textSize="@dimen/DIMEN_32.0PX"/>
+
+            <com.mod.tuziyouqian.widget.ClearEditText
+                android:id="@+id/etPhone"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/DIMEN_74.0PX"
+                android:layout_marginRight="@dimen/DIMEN_74.0PX"
+                android:layout_height="@dimen/DIMEN_68.0PX"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:gravity="center|left"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:hint="请输入手机号码"
+                android:textColor="@color/color_333333"
+                android:textCursorDrawable="@drawable/cursor_style"
+                android:textSize="@dimen/DIMEN_28.0PX" />
+
+        <View
+            android:layout_gravity="center"
+            android:layout_height="1px"
+            android:layout_marginLeft="@dimen/DIMEN_74.0PX"
+            android:layout_marginRight="@dimen/DIMEN_74.0PX"
+            android:layout_width="match_parent"
+            android:background="@color/color_cbcbcb" />
+
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_height="@dimen/DIMEN_88.0PX"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/DIMEN_88.0PX"
+        android:layout_marginLeft="@dimen/DIMEN_74.0PX"
+        android:layout_marginRight="@dimen/DIMEN_74.0PX"
+        android:background="@drawable/radius_solid_cbcbcb_corners_10"
+        android:enabled="false"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="@string/next_step"
+        android:textColor="@color/white"
+        android:textSize="@dimen/DIMEN_32.0PX" />
+</LinearLayout>

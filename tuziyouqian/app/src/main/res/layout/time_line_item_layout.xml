@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/viewTop"
+        android:layout_width="@dimen/DIMEN_4.0PX"
+        android:layout_height="@dimen/DIMEN_6.0PX"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/color_dddddd" />
+
+    <View
+        android:id="@+id/mPoint"
+        android:layout_width="@dimen/DIMEN_28.0PX"
+        android:layout_height="@dimen/DIMEN_28.0PX"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/radius_round_d8d8d8" />
+
+    <View
+        android:id="@+id/viewBottom"
+        android:layout_width="@dimen/DIMEN_4.0PX"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/color_dddddd" />
+</LinearLayout>

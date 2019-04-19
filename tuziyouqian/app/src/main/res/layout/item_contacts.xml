@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_index"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_ededed"
+        android:paddingBottom="@dimen/DIMEN_10.0PX"
+        android:paddingLeft="@dimen/DIMEN_32.0PX"
+        android:paddingTop="@dimen/DIMEN_10.0PX"
+        android:text="A"
+        android:textSize="14sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground">
+
+        <ImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="@dimen/DIMEN_100.0PX"
+            android:layout_height="@dimen/DIMEN_100.0PX"
+            android:layout_marginBottom="@dimen/DIMEN_20.0PX"
+            android:layout_marginLeft="@dimen/DIMEN_32.0PX"
+            android:layout_marginRight="@dimen/DIMEN_20.0PX"
+            android:layout_marginTop="@dimen/DIMEN_20.0PX"
+            android:src="@mipmap/avatar" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/DIMEN_20.0PX"
+            android:layout_toRightOf="@+id/iv_avatar"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text="南尘"
+                android:textColor="#424242"
+                android:textSize="@dimen/DIMEN_30.0PX" />
+
+            <TextView
+                android:id="@+id/tv_Num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/DIMEN_20.0PX"
+                android:includeFontPadding="false"
+                android:text="18262054833"
+                android:textColor="#424242"
+                android:textSize="@dimen/DIMEN_28.0PX" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#eee" />
+</LinearLayout>

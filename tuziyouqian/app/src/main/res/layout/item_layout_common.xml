@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/DIMEN_100.0PX"
+    android:background="?android:attr/selectableItemBackground">
+
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/DIMEN_32.0PX"
+        android:includeFontPadding="false"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/DIMEN_28.0PX" />
+
+    <TextView
+        android:id="@+id/tvContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/DIMEN_20.0PX"
+        android:layout_toLeftOf="@+id/ic_next"
+        android:includeFontPadding="false"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/DIMEN_28.0PX" />
+
+    <ImageView
+        android:id="@+id/ic_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/DIMEN_32.0PX"
+        android:src="@mipmap/ic_next" />
+
+    <View
+        android:id="@+id/mLine"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_ededed" />
+</RelativeLayout>

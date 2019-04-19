@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/radius_solid_white_corners_20"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/DIMEN_40.0PX"
+        android:text="更新提示"
+        android:textColor="@color/black"
+        android:textSize="@dimen/DIMEN_40.0PX" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/DIMEN_24.0PX"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="正在下载更新..."
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/DIMEN_32.0PX" />
+
+        <TextView
+            android:id="@+id/tvProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0%"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/DIMEN_32.0PX" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/mProgress"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/DIMEN_20.0PX"
+        android:layout_marginBottom="@dimen/DIMEN_74.0PX"
+        android:layout_marginLeft="@dimen/DIMEN_50.0PX"
+        android:layout_marginRight="@dimen/DIMEN_50.0PX"
+        android:layout_marginTop="@dimen/DIMEN_36.0PX"
+        android:max="100"
+        android:progressDrawable="@drawable/down_load_progressbar" />
+
+
+</LinearLayout>

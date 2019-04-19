@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_efefef"
+    android:orientation="vertical">
+
+
+    <com.mod.tuziyouqian.widget.TitleHeaderBar
+        android:id="@+id/mTitle"
+        app:title_text="意见反馈"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color_ededed" />
+
+    <ScrollView
+        android:id="@+id/mScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:includeFontPadding="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/DIMEN_40.0PX"
+                android:layout_marginTop="@dimen/DIMEN_26.0PX"
+                android:text="问题描述（必填）"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/DIMEN_28.0PX" />
+
+            <LinearLayout
+                android:id="@+id/mLinear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/DIMEN_26.0PX"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <EditText
+                    android:includeFontPadding="false"
+                    android:id="@+id/etFeedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="left|top"
+                    android:hint="请输入内容..."
+                    android:maxLength="200"
+                    android:minHeight="@dimen/DIMEN_326.0PX"
+                    android:paddingLeft="@dimen/DIMEN_40.0PX"
+                    android:paddingRight="@dimen/DIMEN_40.0PX"
+                    android:paddingTop="@dimen/DIMEN_26.0PX"
+                    android:textColor="@color/color_666666"
+                    android:textColorHint="@color/color_999999"
+                    android:textCursorDrawable="@drawable/cursor_style"
+                    android:textSize="@dimen/DIMEN_28.0PX" />
+
+                <TextView
+                    android:includeFontPadding="false"
+                    android:id="@+id/tvLimit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginBottom="@dimen/DIMEN_26.0PX"
+                    android:layout_marginLeft="@dimen/DIMEN_40.0PX"
+                    android:layout_marginRight="@dimen/DIMEN_40.0PX"
+                    android:layout_marginTop="@dimen/DIMEN_26.0PX"
+                    android:text="0/200"
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/DIMEN_28.0PX" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:layout_marginLeft="@dimen/DIMEN_40.0PX"
+                android:layout_marginTop="@dimen/DIMEN_26.0PX"
+                android:text="问题截图（最多三张，选填）"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/DIMEN_28.0PX" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/DIMEN_26.0PX"
+                android:background="@color/white"
+                android:paddingBottom="@dimen/DIMEN_20.0PX"
+                android:paddingLeft="@dimen/DIMEN_40.0PX"
+                android:paddingRight="@dimen/DIMEN_40.0PX"
+                android:paddingTop="@dimen/DIMEN_20.0PX">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/mPhotoView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:overScrollMode="never" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btnAffirm"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/DIMEN_88.0PX"
+                android:layout_marginBottom="@dimen/DIMEN_140.0PX"
+                android:layout_marginLeft="@dimen/DIMEN_32.0PX"
+                android:layout_marginRight="@dimen/DIMEN_32.0PX"
+                android:layout_marginTop="@dimen/DIMEN_80.0PX"
+                android:background="@drawable/radius_style_button"
+                android:gravity="center"
+                android:text="提交"
+                android:textColor="@color/white"
+                android:textSize="@dimen/DIMEN_34.0PX" />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>

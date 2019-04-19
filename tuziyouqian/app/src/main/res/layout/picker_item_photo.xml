@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/DIMEN_140.0PX"
+    android:layout_height="@dimen/DIMEN_140.0PX">
+
+    <ImageView
+        android:id="@+id/iv_photo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/DIMEN_20.0PX"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop" />
+
+    <com.mod.tuziyouqian.widget.ThumbnailView
+        android:id="@+id/iv_delete"
+        android:layout_width="@dimen/DIMEN_40.0PX"
+        android:layout_height="@dimen/DIMEN_40.0PX"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@mipmap/ic_photo_delete" />
+
+</RelativeLayout>

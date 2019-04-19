@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.mod.tuziyouqian.widget.TitleHeaderBar
+        android:id="@+id/mTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_text="认证中心" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/DIMEN_32.0PX"
+        android:layout_marginTop="@dimen/DIMEN_20.0PX"
+        android:includeFontPadding="false"
+        android:text="温馨提示：请完成后极速借钱"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/DIMEN_24.0PX" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/DIMEN_16.0PX"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <com.mod.tuziyouqian.widget.PersonItemView
+            android:id="@+id/piRealName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:item_icon="@mipmap/ic_real_name"
+            app:item_title="实名认证" />
+
+        <com.mod.tuziyouqian.widget.PersonItemView
+            android:id="@+id/piPersonalInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:item_icon="@mipmap/ic_personal_information"
+            app:item_title="个人信息" />
+
+        <com.mod.tuziyouqian.widget.PersonItemView
+            android:id="@+id/piPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:item_icon="@mipmap/ic_phone"
+            app:item_title="手机认证" />
+
+        <com.mod.tuziyouqian.widget.PersonItemView
+            android:id="@+id/piAliPay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:item_icon="@mipmap/ic_alipay"
+            app:item_title="支付宝" />
+
+        <com.mod.tuziyouqian.widget.PersonItemView
+            android:id="@+id/piFace"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:item_icon="@mipmap/ic_face"
+            app:show_line="false"
+            app:item_title="人脸识别" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/DIMEN_88.0PX"
+        android:layout_marginLeft="@dimen/DIMEN_76.0PX"
+        android:layout_marginRight="@dimen/DIMEN_76.0PX"
+        android:layout_marginTop="@dimen/DIMEN_76.0PX"
+        android:background="@drawable/radius_solid_cbcbcb_corners_10"
+        android:enabled="true"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="@string/next_step"
+        android:textColor="@color/white"
+        android:textSize="@dimen/DIMEN_30.0PX" />
+
+</LinearLayout>

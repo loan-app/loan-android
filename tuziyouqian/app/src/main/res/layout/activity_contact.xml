@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.contact.ContactActivity">
+
+    <com.mod.tuziyouqian.widget.TitleHeaderBar
+        android:id="@+id/mTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_text="通讯录" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/DIMEN_70.0PX"
+        android:layout_marginLeft="@dimen/DIMEN_32.0PX"
+        android:layout_marginRight="@dimen/DIMEN_32.0PX"
+        android:layout_marginTop="@dimen/DIMEN_20.0PX"
+        android:background="@drawable/radius_stroke_999999_corners_12"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/DIMEN_32.0PX"
+        android:paddingRight="@dimen/DIMEN_32.0PX">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/search" />
+
+        <com.mod.tuziyouqian.widget.ClearEditText
+            android:id="@+id/mEtSearch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/DIMEN_10.0PX"
+            android:background="@null"
+            android:hint="请输入关键字"
+            android:textColor="@color/color_333333"
+            android:textColorHint="@color/color_999999"
+            android:textCursorDrawable="@drawable/cursor_style"
+            android:textSize="@dimen/DIMEN_30.0PX"
+            app:clear_icon_marginright="@dimen/DIMEN_10.0PX" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/DIMEN_20.0PX"
+        android:background="@color/white">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/mRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never" />
+
+        <!--字母导航栏-->
+        <com.nanchen.wavesidebar.WaveSideBarView
+            android:id="@+id/mSideBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            app:sidebar_lazy_respond="false"
+            app:sidebar_text_color="@color/color_666666" />
+
+    </FrameLayout>
+</LinearLayout>

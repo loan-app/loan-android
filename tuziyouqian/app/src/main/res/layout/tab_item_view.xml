@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/mIcon"
+        android:layout_width="@dimen/DIMEN_68.0PX"
+        android:layout_height="@dimen/DIMEN_68.0PX"
+        android:focusable="false"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/tabbar_home_selector"></ImageView>
+
+    <TextView
+        android:id="@+id/mTv"
+        android:layout_below="@+id/mIcon"
+        android:layout_width="wrap_content"
+        android:text="我的"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:includeFontPadding="false"
+        android:textColor="@drawable/selector_tab_text_color"
+        android:textSize="@dimen/DIMEN_20.0PX"></TextView>
+
+
+</RelativeLayout>

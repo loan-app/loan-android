@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/DIMEN_22.0PX">
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="@dimen/DIMEN_80.0PX"
+        android:layout_height="@dimen/DIMEN_80.0PX"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/DIMEN_20.0PX"
+        android:src="@mipmap/ic_evaluation" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/DIMEN_16.0PX"
+        android:includeFontPadding="false"
+        android:text="机型估价"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/DIMEN_22.0PX" />
+</LinearLayout>

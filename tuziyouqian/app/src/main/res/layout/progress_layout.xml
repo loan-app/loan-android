@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:adjustViewBounds="true">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_below="@+id/tv_title"
+            android:id="@+id/mRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/DIMEN_90.0PX"
+            android:overScrollMode="never" />
+
+        <TextView
+            android:id="@+id/tvDetail"
+            android:layout_width="@dimen/DIMEN_220.0PX"
+            android:layout_height="@dimen/DIMEN_60.0PX"
+            android:layout_below="@+id/mRecycler"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/DIMEN_20.0PX"
+            android:layout_marginTop="@dimen/DIMEN_20.0PX"
+            android:background="@drawable/radius_solid_ffdb45_corners_30"
+            android:gravity="center"
+            android:text="查看详情"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/DIMEN_26.0PX"
+            android:visibility="gone" />
+
+    </RelativeLayout>

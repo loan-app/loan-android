@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#595cd1</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="color_23cf5f">#23cf5f</color>
+    <color name="login_text_70">#B2FFFFFF</color>
+    <color name="unfocus">#55FFFFFF</color>
+    <color name="color_f2f2f2">#f2f2f2</color>
+    <color name="color_64a0e3">#64a0e3</color>
+    <color name="color_fd664b">#fd664b</color>
+    <color name="color_f6f6f6">#f6f6f6</color>
+</resources>

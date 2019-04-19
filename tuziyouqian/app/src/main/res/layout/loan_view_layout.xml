@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@drawable/radius_solid_white_corners_10"
+                android:layout_height="@dimen/DIMEN_432.0PX"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_alignParentTop="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/DIMEN_28.0PX"
+                    android:text="可借额度(元)"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/color_999999"
+                    android:layout_marginTop="@dimen/DIMEN_72.0PX"/>
+
+                <TextView
+                    android:id="@+id/tvSum"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="@dimen/DIMEN_26.0PX"
+                    android:layout_marginRight="@dimen/DIMEN_26.0PX"
+                    android:layout_height="@dimen/DIMEN_148.0PX"
+                    android:textSize="@dimen/DIMEN_84.0PX"
+                    android:text="5000"
+                    android:gravity="center"
+                    android:background="@mipmap/ic_loan_bg"
+                    android:textColor="@color/color_333333"
+                    android:layout_marginTop="@dimen/DIMEN_144.0PX"/>
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/DIMEN_24.0PX"
+                    android:text="填写身份资料即可借款"
+                    android:textColor="@color/color_999999"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/DIMEN_44.0PX"/>
+            </RelativeLayout>
+<!--    <android.support.v7.widget.CardView
+        android:id="@+id/tvConfirm"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/DIMEN_409.0PX"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@color/color_ff8b7d">
+    >-->
+        <Button
+            android:id="@+id/tvConfirm"
+            android:layout_marginRight="@dimen/DIMEN_44.0PX"
+            android:layout_marginLeft="@dimen/DIMEN_44.0PX"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/DIMEN_88.0PX"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/DIMEN_100.0PX"
+            android:background="@drawable/radius_style_button"
+            android:gravity="center"
+            android:text="立即借款"
+            android:includeFontPadding="false"
+            android:textColor="@color/color_text_primary"
+            android:textSize="@dimen/DIMEN_32.0PX"
+            android:layout_marginBottom="@dimen/DIMEN_24.0PX"/>
+<!--    </android.support.v7.widget.CardView>-->
+
+<!--    <TextView
+        android:id="@+id/tvDetail"
+        android:layout_below="@+id/tvConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/DIMEN_24.0PX"
+        android:text="目前已有50000+人在这里成功借款"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/color_999999"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/DIMEN_66.0PX"/>-->
+
+
+</LinearLayout>

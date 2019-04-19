@@ -1,0 +1,176 @@
+import java.security.InvalidParameterException
+import java.text.SimpleDateFormat
+
+def releaseTime() {
+    def df = new SimpleDateFormat("yyyy-MM-dd")
+    df.setTimeZone(TimeZone.getDefault())
+    return df.format(new Date())
+}
+
+android {
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+    defaultConfig {
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+
+        applicationId rootProject.ext.android["applicationId"]
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+        flavorDimensions "versionCode"
+        // dex突破65535的限制
+        multiDexEnabled true
+        ndk {
+            abiFilters "arm64-v8a", "armeabi", "armeabi-v7a"//选择要使用的平台
+        }
+
+    }
+
+    //各种版权文件等打包的时候冲突
+    packagingOptions {
+        exclude 'META-INF/maven/com.squareup.okio/okio/pom.xml'
+        exclude 'META-INF/maven/com.squareup.okio/okio/pom.properties'
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+        exclude 'LICENSE.txt'
+    }
+
+    //加快gradle的编译速度
+    dexOptions {
+        preDexLibraries true
+        javaMaxHeapSize "4g"
+        dexInProcess = true
+    }
+
+    lintOptions {
+        abortOnError false //经常由于lint错误终止，而这些错误又经常是第三方库中的，我们可以跳过这些错误，继续编译
+    }
+
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    //签名文件
+    signingConfigs {
+        debug {
+            try {
+                storeFile file("key.jks")
+                storePassword KEYSTORE_PASSWORD
+                keyAlias KEY_ALIAS
+                keyPassword KEY_PASSWORD
+            } catch (ex) {
+                throw new InvalidParameterException('You should define KEYSTORE_PASSWORD and KEY_PASSWORD in gradle.properties')
+            }
+        }
+        release {
+            try {
+                storeFile file("key.jks")
+                storePassword KEYSTORE_PASSWORD
+                keyAlias KEY_ALIAS
+                keyPassword KEY_PASSWORD
+            } catch (ex) {
+                throw new InvalidParameterException('You should define KEYSTORE_PASSWORD and KEY_PASSWORD in gradle.properties')
+            }
+        }
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            buildConfigField "boolean", "release", "false"
+            buildConfigField "String", "API_HOST", "${rootProject.ext.host["debug"]}"
+            buildConfigField "String", "H5_HOST", "${rootProject.ext.host["H5_debug"]}"
+            buildConfigField "String", "moxie_apikey", "${rootProject.ext.host["moxie_debug"]}"
+            buildConfigField "String", "alias", "\"tuzi\""
+            resValue "string", "app_name", "兔子优钱_Debug"
+            versionNameSuffix "_debug"//将debug版本的版本名设置为_debug 便于查看
+            minifyEnabled false
+            debuggable true
+            zipAlignEnabled false
+            // 移除无用的resource文件
+            shrinkResources false
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+            signingConfig signingConfigs.debug
+        }
+
+        release {
+            // 不显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            buildConfigField "boolean", "release", "true"
+            buildConfigField "String", "API_HOST", "${rootProject.ext.host["release"]}"
+            buildConfigField "String", "H5_HOST", "${rootProject.ext.host["H5_release"]}"
+            buildConfigField "String", "moxie_apikey", "${rootProject.ext.host["moxie_release"]}"
+            buildConfigField "String", "alias", "\"tuzi\""
+            resValue "string", "app_name", "兔子优钱"
+            minifyEnabled true
+            debuggable false
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources true
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+            signingConfig signingConfigs.release
+            applicationVariants.all { variant ->
+                variant.outputs.all {
+                    if (variant.buildType.name.equals('release')) {
+                        outputFileName = "兔子优钱${variant.productFlavors[0].name}${defaultConfig.versionName}.apk"
+                    } else if (variant.buildType.name.equals('debug')) {
+                        outputFileName = "兔子优钱_Debug${variant.productFlavors[0].name}${defaultConfig.versionName}.apk"
+                    }
+
+                }
+
+            }
+        }
+
+    }
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+    // 多渠道打包配置文件
+    productFlavors {
+        android {}
+        xiaomi {}
+        huawei {}
+        vivo {}
+        leshi {}
+        youyi {}
+        tencent {}
+        chuizi {}
+        meizu {}
+        ali {}
+        _360 {}
+        liqu {}
+        lvan {}
+        oppo {}
+        anzhi {}
+        anfen {}
+        pc6 {}
+        samsung {}
+        sogou {}
+        mumayi {}
+        productFlavors.all { flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name] }
+    }
+
+
+
+    lintOptions {
+        checkReleaseBuilds false
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+}

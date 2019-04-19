@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.mod.tuziyouqian.widget.TitleHeaderBar
+        android:id="@+id/mTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_text="个人信息" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/DIMEN_32.0PX"
+                android:layout_marginTop="@dimen/DIMEN_30.0PX"
+                android:includeFontPadding="false"
+                android:text="如实填写有助借款通过"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/DIMEN_26.0PX" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/DIMEN_20.0PX"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <com.mod.tuziyouqian.widget.CommonItem
+                    android:id="@+id/mCiEducation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:common_title="学历" />
+
+                <com.mod.tuziyouqian.widget.CommonItem
+                    android:id="@+id/mProvince"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:common_title="现居地址" />
+
+                <EditText
+                    android:id="@+id/mEtAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/DIMEN_100.0PX"
+                    android:background="@color/white"
+                    android:hint="请填写居住详细地址"
+                    android:includeFontPadding="false"
+                    android:paddingLeft="@dimen/DIMEN_30.0PX"
+                    android:paddingRight="@dimen/DIMEN_30.0PX"
+                    android:textColor="@color/color_333333"
+                    android:textCursorDrawable="@drawable/cursor_style"
+                    android:textSize="@dimen/DIMEN_28.0PX" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/color_ededed" />
+
+                <com.mod.tuziyouqian.widget.CommonItem
+                    android:id="@+id/mCiLiveTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:common_title="居住时长" />
+
+                <com.mod.tuziyouqian.widget.CommonItem
+                    android:id="@+id/mCiLiveMarry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:common_title="婚姻状态" />
+
+                <com.mod.tuziyouqian.widget.CommonItem
+                    android:id="@+id/mCiWorkType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:common_title="职业" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/DIMEN_100.0PX"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/DIMEN_32.0PX"
+                        android:includeFontPadding="false"
+                        android:text="工作单位"
+                        android:textColor="@color/color_666666"
+                        android:textSize="@dimen/DIMEN_28.0PX" />
+
+                    <EditText
+                        android:id="@+id/mEtCompany"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/DIMEN_100.0PX"
+                        android:background="@color/white"
+                        android:gravity="right|center_vertical"
+                        android:hint="请填写工作单位"
+                        android:includeFontPadding="false"
+                        android:paddingLeft="@dimen/DIMEN_30.0PX"
+                        android:paddingRight="@dimen/DIMEN_30.0PX"
+                        android:textColor="@color/color_333333"
+                        android:textCursorDrawable="@drawable/cursor_style"
+                        android:textSize="@dimen/DIMEN_28.0PX" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/mEtCompanyAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/DIMEN_100.0PX"
+                    android:background="@color/white"
+                    android:hint="请填写公司详细地址"
+                    android:includeFontPadding="false"
+                    android:paddingLeft="@dimen/DIMEN_30.0PX"
+                    android:paddingRight="@dimen/DIMEN_30.0PX"
+                    android:textColor="@color/color_333333"
+                    android:textCursorDrawable="@drawable/cursor_style"
+                    android:textSize="@dimen/DIMEN_28.0PX" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/color_ededed" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/DIMEN_32.0PX"
+                android:layout_marginTop="@dimen/DIMEN_30.0PX"
+                android:includeFontPadding="false"
+                android:text="直系亲属联系人"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/DIMEN_26.0PX" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/DIMEN_22.0PX"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <com.mod.tuziyouqian.widget.CommonItem
+                    android:id="@+id/mCiDirectName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:common_title="与本人关系" />
+
+                <com.mod.tuziyouqian.widget.CommonItem
+                    android:id="@+id/mCiDirectContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:common_show_line="false"
+                    app:common_title="联系人" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/DIMEN_32.0PX"
+                android:layout_marginTop="@dimen/DIMEN_30.0PX"
+                android:includeFontPadding="false"
+                android:text="其他联系人"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/DIMEN_26.0PX" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/DIMEN_22.0PX"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <com.mod.tuziyouqian.widget.CommonItem
+                    android:id="@+id/mCiOthersName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:common_title="与本人关系" />
+
+                <com.mod.tuziyouqian.widget.CommonItem
+                    android:id="@+id/mCiOthersContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:common_show_line="false"
+                    app:common_title="联系人" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/DIMEN_60.0PX"
+                android:layout_marginTop="@dimen/DIMEN_100.0PX"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/guard" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/DIMEN_16.0PX"
+                    android:includeFontPadding="false"
+                    android:text="银行级数据加密"
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/DIMEN_24.0PX" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

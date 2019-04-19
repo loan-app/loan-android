@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <com.mod.tuziyouqian.widget.TitleHeaderBar
+        android:id="@+id/mTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:layout_marginTop="@dimen/DIMEN_128.0PX"
+        android:includeFontPadding="false"
+        android:layout_marginLeft="@dimen/DIMEN_74.0PX"
+        android:layout_marginRight="@dimen/DIMEN_74.0PX"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/DIMEN_30.0PX" />
+
+
+        <com.mod.tuziyouqian.widget.ClearEditText
+            android:id="@+id/etPwd"
+            android:layout_gravity="center"
+            android:layout_height="@dimen/DIMEN_68.0PX"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/DIMEN_74.0PX"
+            android:layout_marginRight="@dimen/DIMEN_74.0PX"
+            android:layout_marginTop="@dimen/DIMEN_68.0PX"
+            android:background="@color/white"
+            android:gravity="center|left"
+            android:hint="请输入密码"
+            android:includeFontPadding="false"
+            android:inputType="textPassword"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/DIMEN_28.0PX" />
+
+    <View
+        android:layout_gravity="center"
+        android:layout_height="1px"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/DIMEN_74.0PX"
+        android:layout_marginRight="@dimen/DIMEN_74.0PX"
+        android:background="@color/color_cbcbcb" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/DIMEN_88.0PX"
+        android:layout_marginTop="@dimen/DIMEN_88.0PX"
+        android:layout_marginLeft="@dimen/DIMEN_74.0PX"
+        android:layout_marginRight="@dimen/DIMEN_74.0PX"
+        android:background="@drawable/radius_solid_cbcbcb_corners_10"
+        android:enabled="false"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:includeFontPadding="false"
+        android:text="@string/login"
+        android:textColor="@color/white"
+        android:textSize="@dimen/DIMEN_32.0PX" />
+
+    <TextView
+        android:id="@+id/tvForgetPwd"
+        android:layout_marginLeft="@dimen/DIMEN_74.0PX"
+        android:layout_marginRight="@dimen/DIMEN_74.0PX"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/DIMEN_26.0PX"
+        android:includeFontPadding="false"
+        android:padding="@dimen/DIMEN_10.0PX"
+        android:text="忘记密码"
+        android:layout_gravity="right"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/DIMEN_28.0PX" />
+
+</LinearLayout>

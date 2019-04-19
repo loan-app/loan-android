@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/DIMEN_120.0PX"
+    android:orientation="horizontal">
+
+    <com.mod.tuziyouqian.widget.TimeLine
+        android:id="@+id/mTimeLine"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/DIMEN_32.0PX" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/DIMEN_32.0PX"
+        android:layout_marginRight="@dimen/DIMEN_32.0PX"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/DIMEN_40.0PX">
+
+            <TextView
+                android:id="@+id/tvEvent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/DIMEN_28.0PX" />
+
+            <TextView
+                android:id="@+id/tvEventTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/DIMEN_24.0PX" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvEventDescribe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/DIMEN_5.0PX"
+            android:layout_marginTop="@dimen/DIMEN_10.0PX"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:textColor="@color/color_cdcdcd"
+            android:textSize="@dimen/DIMEN_22.0PX" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f5f5f5"
+    android:orientation="vertical">
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/mSmart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/llHead"
+        app:srlDisableContentWhenRefresh="true"
+        app:srlEnableLoadMore="false"
+        app:srlEnableOverScrollDrag="false">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.mod.tuziyouqian.widget.TitleHeaderBar
+                    android:id="@+id/mTitle"
+                    android:layout_alignParentTop="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:title_text="兔子优钱" />
+
+                <com.youth.banner.Banner xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/mBanner"
+                    android:layout_below="@+id/mTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/DIMEN_240.0PX"
+                    app:banner_default_image="@mipmap/ic_banner"
+                    app:indicator_drawable_selected="@drawable/selected_radius_banner"
+                    app:indicator_drawable_unselected="@drawable/unselected_radius_banner" />
+
+                <LinearLayout
+                    android:id="@+id/llMarquee"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/DIMEN_60.0PX"
+                    android:orientation="horizontal"
+                    android:background="@color/white">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/DIMEN_32.0PX"
+                        android:src="@mipmap/pic_message" />
+
+
+                    <com.lib.core.view.MarqueeView
+                        android:id="@+id/mMarquee"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/DIMEN_60.0PX"
+                        android:layout_marginLeft="@dimen/DIMEN_16.0PX"
+                        app:mvAnimDuration="500"
+                        app:mvInterval="2000"
+                        app:mvSingleLine="true"
+                        app:mvTextColor="@color/color_666666"
+                        app:mvTextSize="@dimen/DIMEN_24.0PX" />
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/mContent"
+                    android:layout_below="@+id/mTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:overScrollMode="never" />
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

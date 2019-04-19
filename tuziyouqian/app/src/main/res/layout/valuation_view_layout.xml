@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/DIMEN_67.0PX"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="@dimen/DIMEN_16.0PX"
+            android:layout_height="@dimen/DIMEN_16.0PX"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/DIMEN_32.0PX"
+            android:background="@color/color_fc5641" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/DIMEN_16.0PX"
+            android:text="设备检测"
+            android:textColor="@color/color_333333" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/DIMEN_240.0PX"
+        android:layout_marginLeft="@dimen/DIMEN_32.0PX"
+        android:layout_marginRight="@dimen/DIMEN_32.0PX"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/DIMEN_45.0PX"
+        android:paddingTop="@dimen/DIMEN_45.0PX">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:layout_gravity="center"
+                android:text="当前设备"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/DIMEN_24.0PX" />
+
+            <TextView
+                android:id="@+id/tvModel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/DIMEN_28.0PX"
+                android:includeFontPadding="false"
+                android:layout_gravity="center"
+                android:text="型号"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/DIMEN_36.0PX" />
+
+<!--            <TextView
+                android:id="@+id/tvMemory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/DIMEN_18.0PX"
+                android:includeFontPadding="false"
+                android:layout_gravity="center"
+                android:text="内存"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/DIMEN_36.0PX" />-->
+
+            <TextView
+                android:id="@+id/tvMaxPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/DIMEN_18.0PX"
+                android:includeFontPadding="false"
+                android:text="最高回收价"
+                android:textColor="@color/color_f56923"
+                android:textSize="@dimen/DIMEN_26.0PX" />
+
+            <!--<RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tvValuation"
+                    android:layout_width="@dimen/DIMEN_220.0PX"
+                    android:layout_height="@dimen/DIMEN_60.0PX"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/radius_solid_ffdb45_corners_30"
+                    android:gravity="center"
+                    android:text="立即估值"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/DIMEN_26.0PX" />
+            </RelativeLayout>-->
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/DIMEN_67.0PX"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="@dimen/DIMEN_16.0PX"
+            android:layout_height="@dimen/DIMEN_16.0PX"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/DIMEN_32.0PX"
+            android:background="@color/color_fc5641" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/DIMEN_16.0PX"
+            android:text="回收流程"
+            android:textColor="@color/color_333333" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/DIMEN_10.0PX"
+        android:paddingRight="@dimen/DIMEN_10.0PX">
+
+        <com.mod.tuziyouqian.widget.IconItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:IconItem_icon="@mipmap/ic_evaluation"
+            app:IconItem_title="机型估价" />
+
+        <ImageView
+            android:layout_width="@dimen/DIMEN_50.0PX"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_triangle"
+            android:layout_marginTop="@dimen/DIMEN_60.0PX" />
+        <!--<com.mod.tuziyouqian.widget.PointDividerView
+            android:layout_width="@dimen/DIMEN_50.0PX"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/DIMEN_60.0PX" />-->
+
+        <com.mod.tuziyouqian.widget.IconItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:IconItem_icon="@mipmap/ic_order"
+            app:IconItem_title="在线下单" />
+
+        <!--<com.mod.tuziyouqian.widget.PointDividerView
+            android:layout_width="@dimen/DIMEN_50.0PX"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/DIMEN_60.0PX" />-->
+        <ImageView
+            android:layout_width="@dimen/DIMEN_50.0PX"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_triangle"
+            android:layout_marginTop="@dimen/DIMEN_60.0PX" />
+
+        <com.mod.tuziyouqian.widget.IconItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:IconItem_icon="@mipmap/ic_confidence"
+            app:IconItem_title="极速结款" />
+
+        <!--<com.mod.tuziyouqian.widget.PointDividerView
+            android:layout_width="@dimen/DIMEN_50.0PX"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/DIMEN_60.0PX" />-->
+        <ImageView
+            android:layout_width="@dimen/DIMEN_50.0PX"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_triangle"
+            android:layout_marginTop="@dimen/DIMEN_60.0PX" />
+
+        <com.mod.tuziyouqian.widget.IconItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:IconItem_icon="@mipmap/ic_recycling"
+            app:IconItem_title="质检入库" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvGetMoney"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/DIMEN_88.0PX"
+        android:layout_marginLeft="@dimen/DIMEN_68.0PX"
+        android:layout_marginRight="@dimen/DIMEN_68.0PX"
+        android:layout_marginTop="@dimen/DIMEN_20.0PX"
+        android:background="@drawable/radius_style_button"
+        android:gravity="center"
+        android:text="评估领钱"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/DIMEN_30.0PX" />
+
+</LinearLayout>

@@ -1,0 +1,1 @@
+include ':app',':mylibrary', ':picture_library', ':ucrop',':ocr_ui',':cameraview'

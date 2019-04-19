@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.mod.tuziyouqian.widget.TitleHeaderBar
+        android:id="@+id/mTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_text="身份识别" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/DIMEN_306.0PX"
+        android:layout_marginTop="@dimen/DIMEN_18.0PX"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/DIMEN_20.0PX"
+        android:paddingLeft="@dimen/DIMEN_40.0PX"
+        android:paddingRight="@dimen/DIMEN_40.0PX"
+        android:paddingTop="@dimen/DIMEN_32.0PX">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="人脸识别"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/DIMEN_28.0PX" />
+
+        <ImageView
+            android:id="@+id/ivScan"
+            android:layout_width="@dimen/DIMEN_204.0PX"
+            android:layout_height="@dimen/DIMEN_252.0PX"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/DIMEN_10.0PX"
+            android:src="@mipmap/face_default" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlExample"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/DIMEN_500.0PX"
+        android:layout_marginTop="@dimen/DIMEN_28.0PX"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/DIMEN_20.0PX"
+        android:paddingLeft="@dimen/DIMEN_40.0PX"
+        android:paddingRight="@dimen/DIMEN_40.0PX">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:paddingTop="@dimen/DIMEN_32.0PX"
+            android:text="人脸识别请参考以下示例"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/DIMEN_28.0PX" />
+
+        <ImageView
+            android:layout_width="@dimen/DIMEN_222.0PX"
+            android:layout_height="@dimen/DIMEN_302.0PX"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/DIMEN_128.0PX"
+            android:src="@mipmap/pic_portrait" />
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

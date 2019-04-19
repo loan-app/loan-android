@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.mod.tuziyouqian.widget.TitleHeaderBar
+        android:id="@+id/mTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_text="@string/register" />
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/DIMEN_74.0PX"
+        android:layout_marginRight="@dimen/DIMEN_74.0PX"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/DIMEN_118.0PX"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/DIMEN_72.0PX"
+            android:orientation="horizontal">
+
+            <com.mod.tuziyouqian.widget.ClearEditText
+                android:id="@+id/etCode"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/DIMEN_72.0PX"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center|left"
+                android:hint="请输入验证码"
+                android:inputType="number"
+                android:maxLength="4"
+                android:textColor="@color/color_333333"
+                android:textColorHint="@color/color_999999"
+                android:textCursorDrawable="@drawable/cursor_style"
+                android:textSize="@dimen/DIMEN_28.0PX" />
+
+            <Button
+                android:id="@+id/btnCode"
+                android:layout_width="@dimen/DIMEN_200.0PX"
+                android:layout_height="@dimen/DIMEN_71.0PX"
+                android:layout_marginLeft="@dimen/DIMEN_20.0PX"
+                android:background="@drawable/radius_style_button"
+                android:text="获取验证码"
+                android:textColor="@color/color_text_primary"
+                android:textSize="@dimen/DIMEN_28.0PX" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginRight="@dimen/DIMEN_220.0PX"
+            android:background="@color/color_cbcbcb" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/DIMEN_74.0PX"
+        android:layout_marginRight="@dimen/DIMEN_74.0PX"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/DIMEN_60.0PX"
+        android:orientation="vertical">
+
+            <com.mod.tuziyouqian.widget.ClearEditText
+                android:id="@+id/etPwd"
+                android:layout_height="@dimen/DIMEN_72.0PX"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center|left"
+                android:hint="请设置6-16位登录密码"
+                android:inputType="phone"
+                android:maxLength="16"
+                android:maxLines="1"
+                android:textColor="@color/color_333333"
+                android:textColorHint="@color/color_999999"
+                android:textCursorDrawable="@drawable/cursor_style"
+                android:textSize="@dimen/DIMEN_28.0PX" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/color_cbcbcb" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_marginLeft="@dimen/DIMEN_74.0PX"
+        android:layout_marginRight="@dimen/DIMEN_74.0PX"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/DIMEN_88.0PX"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/DIMEN_202.0PX"
+        android:background="@drawable/radius_solid_cbcbcb_corners_10"
+        android:enabled="false"
+        android:text="@string/next_step"
+        android:textColor="@color/white"
+        android:textSize="@dimen/DIMEN_32.0PX" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/DIMEN_12.0PX"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <CheckBox
+            android:id="@+id/mCheckBox"
+            style="@style/checkBox_agree_theme"
+            android:layout_width="wrap_content"
+            android:includeFontPadding="false"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:checked="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/DIMEN_12.0PX"
+            android:includeFontPadding="false"
+            android:text="我已阅读并同意"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/DIMEN_24.0PX" />
+
+        <TextView
+            android:id="@+id/tvDeal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:padding="@dimen/DIMEN_12.0PX"
+            android:layout_gravity="center_vertical"
+            android:text="《注册服务协议》"
+            android:textColor="@color/color_64a0e3"
+            android:textSize="@dimen/DIMEN_24.0PX" />
+
+
+    </LinearLayout>
+</LinearLayout>
