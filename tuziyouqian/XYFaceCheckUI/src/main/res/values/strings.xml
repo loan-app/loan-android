@@ -1,0 +1,105 @@
+<resources>
+    <string name="app_name">BioAssayAndroid</string>
+
+    <string name="common_detecting">"准备开始检测"</string>
+    <string name="common_face_too_far">"请移动手机靠近面部"</string>
+    <string name="common_face_too_close">"请移动手机远离面部"</string>
+    <string name="common_face_covered">请正对手机，去除"%s"遮挡</string>
+    <string name="common_covered_brow">眉毛</string>
+    <string name="common_covered_eye">眼部</string>
+    <string name="common_covered_nose">鼻部</string>
+    <string name="common_covered_mouth">嘴部</string>
+    <string name="common_tracking_missed">"请将人脸移入框内"</string>
+    <string name="common_txt_back">"返回"</string>
+    <string name="common_blink">请眨眼</string>
+    <string name="common_mouth">请张嘴，随后合拢</string>
+    <string name="common_nod">请上下点头</string>
+    <string name="common_yaw">请缓慢摇头</string>
+    <string name="common_yaw_right">请向右摇头</string>
+    <string name="common_yaw_left">请向左摇头</string>
+    <string name="common_nod_updown">请点头</string>
+    <string name="common_open_mouth">请张嘴</string>
+    <string name="common_init_notice">请让我看到你的正脸</string>
+    <string name="common_face_init_notice">正在初始化，请稍候</string>
+    <string name="face_result_complete">检测完成</string>
+
+    <string name="app_name_with_version">"动作活体 v"%s"</string>
+    <string name="txt_start_detect">开始检测</string>
+    <string name="txt_detect_again">"重新检测"</string>
+    <string name="txt_face_matching">人脸匹配中...</string>
+    <string name="txt_copyright"></string>
+    <string name="txt_error_timeout">"检测超时，请重试一次"</string>
+    <string name="txt_error_canceled">"活体检测已取消"</string>
+    <string name="txt_detect_success">"活体检测成功"</string>
+    <string name="txt_error_permission">"权限检测失败，请检查应用权限设置"</string>
+    <string name="txt_error_camera">"初始化相机失败"</string>
+    <string name="txt_error_model_not_found">模型文件不存在</string>
+    <string name="txt_error_license_not_found">授权文件不存在</string>
+    <string name="txt_error_config">启动配置错误</string>
+    <string name="txt_error_license">未通过授权验证</string>
+    <string name="txt_error_model">模型文件错误</string>
+    <string name="txt_error_license_expire">授权文件过期</string>`
+    <string name="txt_error_license_package_name">绑定包名错误</string>
+    <string name="txt_error_state">错误的方法状态调用</string>
+    <string name="txt_error_action_over">动作幅度过大，请保持人脸在屏幕中央，重试一次</string>
+    <string name="txt_error_action_fail">活体检测失败，请重试一次</string>
+    <string name="txt_error_face_cover_detecting">请调整人脸姿态，去除面部遮挡，正对屏幕重试一次</string>
+    <string name="txt_error_server_timeout">网络请求超时,请稍后重试</string>
+    <string name="error_api_key_secret">"API_KEY 或 API_SECRET 错误"</string>
+    <string name="error_server">"服务器访问错误"</string>
+    <string name="invalid_arguments">参数设置不合法</string>
+    <string name="notice_voice">提示声音</string>
+    <string name="easy">Easy</string>
+    <string name="normal">Normal</string>
+    <string name="hard">Hard</string>
+    <string name="hell">Hell</string>
+    <string name="difficulty">难易程度</string>
+    <string name="sequence">"动作序列"</string>
+    <string name="on">开启</string>
+    <string name="off">关闭</string>
+    <string name="reach_max_actions">最多可设置4个动作</string>
+    <string name="delete_first_action">第一个动作必须为眨眼</string>
+    <string name="blink">BLINK</string>
+    <string name="nod">NOD</string>
+    <string name="mouth">MOUTH</string>
+    <string name="yaw">YAW</string>
+
+    <!-- preference keys -->
+    <string name="done">完成</string>
+
+    <string-array name="pref_complexity_titles">
+        <item>Easy</item>
+        <item>Normal</item>
+        <item>Hard</item>
+        <item>Hell</item>
+    </string-array>
+    <string-array name="pref_complexity_values">
+        <item>Easy</item>
+        <item>Normal</item>
+        <item>Hard</item>
+        <item>Hell</item>
+    </string-array>
+
+    <string name="default_complexity_value">Normal</string>
+
+    <!--配置商户号,订单号-->
+    <string name="str_merchent_no">8000019451</string>
+    <string name="str_bioassay_order">20180626182616000000004617197407</string>
+
+
+
+    <string name="tips_area_large">请靠近一点</string>
+    <string name="tips_area_small">请远离一点</string>
+    <string name="tips_posture">请正对手机</string>
+    <string name="tips_multi_face">请单人进入</string>
+    <string name="tips_no_face">请将人脸移入框内</string>
+    <string name="tips_faraway">请远离一点</string>
+    <string name="tips_near">请靠近一点</string>
+    <string name="tips_bright">光线过强</string>
+    <string name="tips_dark">光线不足</string>
+    <string name="tips_camera">请对准摄像头</string>
+    <string name="check_pass">检测通过</string>
+    <string name="alive_check_pass">活体检测通过</string>
+    <string name="alive_check_failed">活体检测失败</string>
+    <string name="alive_check_timeout">活体检测超时</string>
+</resources>

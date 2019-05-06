@@ -7,7 +7,7 @@
     android:orientation="vertical"
     tools:context=".ui.activity.contact.ContactActivity">
 
-    <com.mod.tuziyouqian.widget.TitleHeaderBar
+    <com.mod.jishidai.widget.TitleHeaderBar
         android:id="@+id/mTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -30,7 +30,7 @@
             android:layout_gravity="center_vertical"
             android:src="@mipmap/search" />
 
-        <com.mod.tuziyouqian.widget.ClearEditText
+        <com.mod.jishidai.widget.ClearEditText
             android:id="@+id/mEtSearch"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

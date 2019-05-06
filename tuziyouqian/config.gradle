@@ -1,9 +1,9 @@
 ext {
 
     host = [
-            debug        : "\"/\"",
+            debug        : "\"http://101.37.64.241:10001/\"",
             release      : "\"/\"",
-            H5_debug     : "\"\"",
+            H5_debug     : "\"http://h5.zzbj.xin\"",
             H5_release   : "\"\"",
             moxie_debug  : "\"\"",
             moxie_release: "\"\""
@@ -13,7 +13,7 @@ ext {
     android = [
             compileSdkVersion       : 27,
             buildToolsVersion       : '27.0.3',
-            applicationId           : 'com.mod.tuziyouqian',
+            applicationId           : 'com.mod.jishidai',
             minSdkVersion           : 19,
             targetSdkVersion        : 27,
             versionCode             : 2,

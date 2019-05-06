@@ -6,7 +6,7 @@
     android:orientation="vertical">
 
 
-    <com.mod.tuziyouqian.widget.TitleHeaderBar
+    <com.mod.jishidai.widget.TitleHeaderBar
         android:id="@+id/mTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -39,13 +39,13 @@
                 android:background="@color/white"
                 android:orientation="vertical">
 
-                <com.mod.tuziyouqian.widget.CommonItem
+                <com.mod.jishidai.widget.CommonItem
                     android:id="@+id/mCiEducation"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:common_title="学历" />
 
-                <com.mod.tuziyouqian.widget.CommonItem
+                <com.mod.jishidai.widget.CommonItem
                     android:id="@+id/mProvince"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -69,19 +69,19 @@
                     android:layout_height="1px"
                     android:background="@color/color_ededed" />
 
-                <com.mod.tuziyouqian.widget.CommonItem
+                <com.mod.jishidai.widget.CommonItem
                     android:id="@+id/mCiLiveTime"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:common_title="居住时长" />
 
-                <com.mod.tuziyouqian.widget.CommonItem
+                <com.mod.jishidai.widget.CommonItem
                     android:id="@+id/mCiLiveMarry"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:common_title="婚姻状态" />
 
-                <com.mod.tuziyouqian.widget.CommonItem
+                <com.mod.jishidai.widget.CommonItem
                     android:id="@+id/mCiWorkType"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -154,13 +154,13 @@
                 android:background="@color/white"
                 android:orientation="vertical">
 
-                <com.mod.tuziyouqian.widget.CommonItem
+                <com.mod.jishidai.widget.CommonItem
                     android:id="@+id/mCiDirectName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:common_title="与本人关系" />
 
-                <com.mod.tuziyouqian.widget.CommonItem
+                <com.mod.jishidai.widget.CommonItem
                     android:id="@+id/mCiDirectContact"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -185,13 +185,13 @@
                 android:background="@color/white"
                 android:orientation="vertical">
 
-                <com.mod.tuziyouqian.widget.CommonItem
+                <com.mod.jishidai.widget.CommonItem
                     android:id="@+id/mCiOthersName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:common_title="与本人关系" />
 
-                <com.mod.tuziyouqian.widget.CommonItem
+                <com.mod.jishidai.widget.CommonItem
                     android:id="@+id/mCiOthersContact"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

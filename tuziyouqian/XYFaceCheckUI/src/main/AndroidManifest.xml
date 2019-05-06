@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.xinyan.bioassay.sdk">
+
+    <!-- 联网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:resizeableActivity="true">
+        <activity
+            android:name="com.xinyan.facecheck.FaceCheckStart"
+            android:launchMode="singleTask"
+            android:theme="@style/SDKAppTheme"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.xinyan.facecheck.FaceCheckIDActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize"
+            android:theme="@style/SDKAppTheme" />
+        <activity
+            android:name="com.xinyan.facecheck.FaceCheckResultActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SDKAppTheme" />
+        <!--&lt;!&ndash;必选 FOSAFER_APPID&ndash;&gt;-->
+        <!--<meta-data-->
+            <!--android:name="FOSAFER_APPID"-->
+            <!--android:value="15847359" />-->
+        <!--&lt;!&ndash;必选 FOSAFER_APPKEY&ndash;&gt;-->
+        <!--<meta-data-->
+            <!--android:name="FOSAFER_APPKEY"-->
+            <!--android:value="1d201bf0-33a6-4bac-affb-30c3ab59ee9e" />-->
+        <!--必选 FOSAFER_APPID-->
+        <meta-data
+            android:name="FOSAFER_APPID"
+            android:value="22534411" />
+        <!--必选 FOSAFER_APPKEY-->
+        <meta-data
+            android:name="FOSAFER_APPKEY"
+            android:value="a5f3ebbb-de85-4a17-9b6f-52a52bbc1a06" />
+
+        <activity
+            android:name="com.xinyan.facecheck.FosActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/SDKAppTheme"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

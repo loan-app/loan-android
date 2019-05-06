@@ -1,1 +1,1 @@
-include ':app',':mylibrary', ':picture_library', ':ucrop',':ocr_ui',':cameraview'
+include ':app', ':mylibrary', ':picture_library', ':ucrop', ':ocr_ui', ':cameraview', ':XYFaceCheckUI'

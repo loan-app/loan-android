@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.mod.tuziyouqian">
+    package="com.mod.jishidai">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -12,6 +12,7 @@
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+
     <!-- 需要使用Feature -->
     <uses-feature
         android:name="android.hardware.camera"
@@ -27,7 +28,7 @@
         android:required="false" />
 
     <application
-        android:name=".base.App"
+        android:name="com.mod.jishidai.base.App"
         android:allowBackup="true"
         android:icon="@mipmap/start_logo"
         android:roundIcon="@mipmap/start_logo"
@@ -35,7 +36,7 @@
         android:theme="@style/AppTheme">
         <provider
             android:name="android.support.v4.content.FileProvider"
-            android:authorities="com.mod.tuziyouqian.FileProvider"
+            android:authorities="com.mod.jishidai.FileProvider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
@@ -52,11 +53,11 @@
             android:value="${UMENG_CHANNEL_VALUE}" />-->
 
         <activity
-            android:name=".ui.activity.main.MainActivity"
+            android:name="com.mod.jishidai.ui.activity.main.MainActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.splash.SplashActivity"
+            android:name="com.mod.jishidai.ui.activity.splash.SplashActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -66,11 +67,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.activity.webview.WebViewActivity"
+            android:name="com.mod.jishidai.ui.activity.webview.WebViewActivity"
             android:hardwareAccelerated="true"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.login.LoginActivity"
+            android:name="com.mod.jishidai.ui.activity.login.LoginActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <!-- 摩羯座 -->
@@ -78,27 +79,27 @@
             android:name="com.moxie.client.MainActivity"
             android:theme="@android:style/Theme.NoTitleBar" />
         <activity
-            android:name=".ui.activity.more.MoreActivity"
+            android:name="com.mod.jishidai.ui.activity.more.MoreActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.certification.CertificationActivity"
+            android:name="com.mod.jishidai.ui.activity.certification.CertificationActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.certification.CertificatContainActivity"
+            android:name="com.mod.jishidai.ui.activity.certification.CertificatContainActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.contact.ContactActivity"
+            android:name="com.mod.jishidai.ui.activity.contact.ContactActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.feedback.FeedbackActivity"
+            android:name="com.mod.jishidai.ui.activity.feedback.FeedbackActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.certification.Camera2Activity"
+            android:name="com.mod.jishidai.ui.activity.certification.Camera2Activity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
     </application>

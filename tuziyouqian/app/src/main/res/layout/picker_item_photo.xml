@@ -12,7 +12,7 @@
         android:adjustViewBounds="true"
         android:scaleType="centerCrop" />
 
-    <com.mod.tuziyouqian.widget.ThumbnailView
+    <com.mod.jishidai.widget.ThumbnailView
         android:id="@+id/iv_delete"
         android:layout_width="@dimen/DIMEN_40.0PX"
         android:layout_height="@dimen/DIMEN_40.0PX"

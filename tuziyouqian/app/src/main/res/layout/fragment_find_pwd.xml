@@ -6,7 +6,7 @@
     android:background="@color/white"
     android:orientation="vertical">
 
-    <com.mod.tuziyouqian.widget.TitleHeaderBar
+    <com.mod.jishidai.widget.TitleHeaderBar
         android:id="@+id/mTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -26,7 +26,7 @@
             android:layout_height="@dimen/DIMEN_72.0PX"
             android:orientation="horizontal">
 
-            <com.mod.tuziyouqian.widget.ClearEditText
+            <com.mod.jishidai.widget.ClearEditText
                 android:id="@+id/etCode"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -68,7 +68,7 @@
         android:layout_marginTop="@dimen/DIMEN_60.0PX"
         android:orientation="vertical">
 
-            <com.mod.tuziyouqian.widget.ClearEditText
+            <com.mod.jishidai.widget.ClearEditText
                 android:id="@+id/etPwd"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/DIMEN_72.0PX"
