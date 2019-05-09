@@ -1,9 +1,9 @@
 ext {
 
     host = [
-            debug        : "\"http://101.37.64.241:10001/\"",
+            debug        : "\"http://api.own.zzbj.xin/\"",
             release      : "\"/\"",
-            H5_debug     : "\"http://h5.zzbj.xin\"",
+            H5_debug     : "\"http://h5.own.zzbj.xin\"",
             H5_release   : "\"\"",
             moxie_debug  : "\"\"",
             moxie_release: "\"\""

@@ -40,11 +40,11 @@ public class MyInterceptor implements Interceptor {
             request = addPostParams(request);
         }
         if (LogUtils.mDebug) {
-            LogUtils.logi("OkHttpTag请求地址:" + URLDecoder.decode(request.url().toString(), "UTF-8"));
+            LogUtils.loge("OkHttpTag请求地址:" + URLDecoder.decode(request.url().toString(), "UTF-8"));
             Response response = chain.proceed(request);
             MediaType mediaType = response.body().contentType();
             String content = response.body().string();
-            LogUtils.logi("OkHttpTag:请求结果:" + content);
+            LogUtils.loge("OkHttpTag:请求结果:" + content);
             return response.newBuilder()
                     .body(ResponseBody.create(mediaType, content))
                     .build();
@@ -86,7 +86,7 @@ public class MyInterceptor implements Interceptor {
             //删除最后一个"&"
             paramsBuilder.deleteCharAt(paramsBuilder.length() - 1);
 //            paramsBuilder.append(AppConfig.APP_SECRET);
-            LogUtils.logi("OkHttpTag:加密前排序:" + paramsBuilder.toString());
+            LogUtils.loge("OkHttpTag:加密前排序:" + paramsBuilder.toString());
 //            digest = MD5Util.MD5(paramsBuilder.toString());
 //            newBuilder.add(AppConfig.SIGN, digest);
 

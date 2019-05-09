@@ -21,6 +21,7 @@ import android.widget.LinearLayout;
 import com.just.agentweb.AgentWeb;
 import com.lib.core.utils.AppUtils;
 import com.lib.core.utils.LogUtils;
+import com.lib.core.utils.MD5Util;
 import com.lib.core.utils.PermissionUtils;
 import com.lib.core.utils.SPUtils;
 import com.lib.core.utils.ToastUtil;
@@ -43,6 +44,8 @@ import com.moxie.client.manager.MoxieContext;
 import com.moxie.client.manager.MoxieSDK;
 import com.moxie.client.model.MxParam;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 
 import butterknife.BindView;
@@ -291,28 +294,25 @@ public class WebViewFragment extends BaseFragment<WebViewPresenter, WebViewModel
     public void showRealNameInfo(String status, RealNameBean nameBean) {
         if (nameBean == null)
             return;
-        HashMap<String, String> extendParam = new HashMap<String, String>();
-        extendParam.put(MxParam.PARAM_CARRIER_IDCARD, nameBean.userCertNo);        // 身份证
-        extendParam.put(MxParam.PARAM_CARRIER_PHONE, nameBean.userPhone);                // 手机号
-        extendParam.put(MxParam.PARAM_CARRIER_NAME, nameBean.userName);                     // 姓名
-        extendParam.put(MxParam.PARAM_CARRIER_EDITABLE, MxParam.PARAM_COMMON_NO);   // 是否允许用户
-        MxParam mxParam = new MxParam();
-        mxParam.setExtendParams(extendParam);
-        mxParam.setUserId(App.getInstance().getUid());
-        mxParam.setApiKey(BuildConfig.moxie_apikey);
-        if ("8".equals(status)) {//运营商
-            mxParam.setFunction(MxParam.PARAM_FUNCTION_CARRIER);
-        } else if ("9".equals(status)) {//支付宝
-            mxParam.setFunction(MxParam.PARAM_FUNCTION_ALIPAY);
-        }
-        MoxieSDK.getInstance().start(_mActivity, mxParam, new MoxieCallBack() {
-            @Override
-            public boolean callback(MoxieContext moxieContext, MoxieCallBackData moxieCallBackData) {
-                String s = "成功";
-                return super.callback(moxieContext, moxieCallBackData);
-            }
-        });
+        if ("8".equals(status)) {
+            Date day=new Date();
+            SimpleDateFormat df = new SimpleDateFormat("yyyyMMddHHmmss");
+            String timeMark = df.format(day);
+            String apiUser = "8150728867";
+            //32位 (将apiUser 、 timeMark 、 apiName 、 taskId 、apiKey5个变量拼装后MD5加密。
 
+            String apiName = "carrier";
+            String taskId = nameBean.userCertNo;
+            String jumpUrl =BuildConfig.H5_HOST+ "/user/cert_center.html";
+            String apiEnc = MD5Util.MD5(apiUser+timeMark+apiName+taskId+"452wmFls6G6OcHWv");
+            String url = " https://qz.xinyan.com/h5/"+apiUser+"/"+apiEnc+"/"+timeMark+"/"+apiName+"/"+taskId+"?jumpUrl="+jumpUrl+"&dataNotifyUrl=www.baidu.com&reportNotifyUrl=https://open.xinyan.com";
+            Bundle bundle = new Bundle();
+            bundle.putString(WebViewFragment.WEB_URL, url);
+            startActivity(WebViewActivity.class, bundle);
+            LogUtils.loge("运营商--->"+url);
+            _mActivity.finish();
+//           https://qz.xinyan.com/h5/{apiUser}/{apiEnc}/{timeMark}/{apiName}/{taskId}?jumpUrl={jumpUrl}
+        }
     }
 
     @Override
