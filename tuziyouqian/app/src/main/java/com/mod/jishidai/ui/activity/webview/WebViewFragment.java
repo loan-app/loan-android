@@ -305,7 +305,7 @@ public class WebViewFragment extends BaseFragment<WebViewPresenter, WebViewModel
             String taskId = nameBean.userCertNo;
             String jumpUrl =BuildConfig.H5_HOST+ "/user/cert_center.html";
             String apiEnc = MD5Util.MD5(apiUser+timeMark+apiName+taskId+"452wmFls6G6OcHWv");
-            String url = " https://qz.xinyan.com/h5/"+apiUser+"/"+apiEnc+"/"+timeMark+"/"+apiName+"/"+taskId+"?jumpUrl="+jumpUrl+"&dataNotifyUrl=www.baidu.com&reportNotifyUrl=https://open.xinyan.com";
+            String url = " https://qz.xinyan.com/h5/"+apiUser+"/"+apiEnc+"/"+timeMark+"/"+apiName+"/"+taskId+"?jumpUrl="+jumpUrl+"&dataNotifyUrl=https://api.own.zzbj.xin/user/userMobileAuth&reportNotifyUrl=https://open.xinyan.com";
             Bundle bundle = new Bundle();
             bundle.putString(WebViewFragment.WEB_URL, url);
             startActivity(WebViewActivity.class, bundle);
