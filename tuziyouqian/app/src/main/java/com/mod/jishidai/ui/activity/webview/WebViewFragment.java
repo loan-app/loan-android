@@ -302,7 +302,7 @@ public class WebViewFragment extends BaseFragment<WebViewPresenter, WebViewModel
             //32位 (将apiUser 、 timeMark 、 apiName 、 taskId 、apiKey5个变量拼装后MD5加密。
 
             String apiName = "carrier";
-            String taskId = nameBean.userCertNo;
+            String taskId = nameBean.userCertNo+System.currentTimeMillis();
             String jumpUrl =BuildConfig.H5_HOST+ "/user/cert_center.html";
             String apiEnc = MD5Util.MD5(apiUser+timeMark+apiName+taskId+"452wmFls6G6OcHWv");
             String url = " https://qz.xinyan.com/h5/"+apiUser+"/"+apiEnc+"/"+timeMark+"/"+apiName+"/"+taskId+"?jumpUrl="+jumpUrl+"&dataNotifyUrl=https://api.own.zzbj.xin/user/userMobileAuth&reportNotifyUrl=https://open.xinyan.com";
