@@ -9,7 +9,7 @@ import com.mod.jishidai.utils.AppConfig;
 public class BaseBean<T> {
 
     public String status;
-    public String message;
+    public String msg;
     public T data;
 
     public boolean success() {

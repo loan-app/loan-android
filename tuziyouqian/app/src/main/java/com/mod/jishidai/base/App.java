@@ -239,8 +239,7 @@ public class App extends BaseApplication {
      * @brief 获得用户token, 默认为null
      */
     public String getToken() {
-        String token = SPUtils.getStringData(SPUtils.TOKEN, null);
-        return "";
+        return SPUtils.getStringData(SPUtils.TOKEN, "");
         //return "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiIxODEyOTEiLCJwaG9uZSI6IjE1Mjc5MzM4NjI1IiwiY2xpZW50VHlwZSI6ImFuZHJvaWQiLCJjbGllbnRBbGlhcyI6Imh1YXFpYW5ndWFuIiwiY2xpZW50VmVyc2lvbiI6IjEuMC4xX2RlYnVnIiwiaWF0IjoxNTU3MzI4NDk5fQ.r1S_s5fMSYAO6Nok9nbrYI3EMP7Juu__5Fi1HrzNTmM";
     }
 

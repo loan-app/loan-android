@@ -188,7 +188,7 @@ public class FindPwdFragment extends BaseFragment<LoginPresenter, LoginModel> im
 
                     @Override
                     public void onConfirm(String code) {
-                        mPresenter.getVerificationCode(phone, code, "1002", false);
+                        mPresenter.getVerificationCode(phone, code, "001", false);
                     }
                 });
                 break;

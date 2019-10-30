@@ -192,7 +192,7 @@ public class RegisterFragment extends BaseFragment<LoginPresenter, LoginModel> i
 
                     @Override
                     public void onConfirm(String code) {
-                        mPresenter.getVerificationCode(phone, code, "1001", false);
+                        mPresenter.getVerificationCode(phone, code, "001", false);
                     }
                 });
                 break;

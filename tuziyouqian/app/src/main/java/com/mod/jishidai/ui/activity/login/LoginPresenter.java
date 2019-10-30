@@ -46,7 +46,7 @@ public class LoginPresenter extends LoginContract.Presenter {
      *
      * @param phone      手机号
      * @param graph_code 图形验证码
-     * @param sms_type   事件类型	String	非空	1001-注册，1002-修改密码
+     * @param sms_type   事件类型	String	非空	001
      */
     @Override
     public void getVerificationCode(String phone, String graph_code, String sms_type, boolean showDialog) {

@@ -92,7 +92,7 @@ public abstract class RxSubscriber<T> extends DisposableSubscriber<T> {
             if (baseBean.success()) {
                 onSuccess(t);
             } else {
-                onFailed(baseBean.status, baseBean.message);
+                onFailed(baseBean.status, baseBean.msg);
                 if (AppConfig.TOKEN_OVERDUE.equals(baseBean.status)) {
                     App.logOut();
                     Intent intent = new Intent(mContext, LoginActivity.class);
