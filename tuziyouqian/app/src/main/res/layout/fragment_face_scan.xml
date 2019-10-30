@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.mod.jishidai.widget.TitleHeaderBar
+    <com.huatu.android.widget.TitleHeaderBar
         android:id="@+id/mTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

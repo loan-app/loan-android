@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.mod.jishidai.widget.TitleHeaderBar
+    <com.huatu.android.widget.TitleHeaderBar
         android:id="@+id/mTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -28,35 +28,35 @@
         android:background="@color/white"
         android:orientation="vertical">
 
-        <com.mod.jishidai.widget.PersonItemView
+        <com.huatu.android.widget.PersonItemView
             android:id="@+id/piRealName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:item_icon="@mipmap/ic_real_name"
             app:item_title="实名认证" />
 
-        <com.mod.jishidai.widget.PersonItemView
+        <com.huatu.android.widget.PersonItemView
             android:id="@+id/piPersonalInfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:item_icon="@mipmap/ic_personal_information"
             app:item_title="个人信息" />
 
-        <com.mod.jishidai.widget.PersonItemView
+        <com.huatu.android.widget.PersonItemView
             android:id="@+id/piPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:item_icon="@mipmap/ic_phone"
             app:item_title="手机认证" />
 
-        <com.mod.jishidai.widget.PersonItemView
+        <com.huatu.android.widget.PersonItemView
             android:id="@+id/piAliPay"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:item_icon="@mipmap/ic_alipay"
             app:item_title="支付宝" />
 
-        <com.mod.jishidai.widget.PersonItemView
+        <com.huatu.android.widget.PersonItemView
             android:id="@+id/piFace"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

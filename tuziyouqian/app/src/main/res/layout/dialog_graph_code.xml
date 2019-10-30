@@ -36,7 +36,7 @@
             android:layout_weight="1"
             android:orientation="vertical">
 
-            <com.mod.jishidai.widget.ClearEditText
+            <com.huatu.android.widget.ClearEditText
                 android:id="@+id/etCode"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/DIMEN_95.0PX"

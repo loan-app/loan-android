@@ -6,7 +6,7 @@
     android:background="@color/color_f5f5f5"
     android:orientation="vertical">
 
-    <com.mod.jishidai.widget.TitleHeaderBar
+    <com.huatu.android.widget.TitleHeaderBar
         android:id="@+id/mTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

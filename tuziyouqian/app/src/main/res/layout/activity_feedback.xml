@@ -8,7 +8,7 @@
     android:orientation="vertical">
 
 
-    <com.mod.jishidai.widget.TitleHeaderBar
+    <com.huatu.android.widget.TitleHeaderBar
         android:id="@+id/mTitle"
         app:title_text="意见反馈"
         android:layout_width="match_parent"

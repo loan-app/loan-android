@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:orientation="vertical">
-    <com.mod.jishidai.widget.TitleHeaderBar
+    <com.huatu.android.widget.TitleHeaderBar
         android:id="@+id/mTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
@@ -22,7 +22,7 @@
         android:textSize="@dimen/DIMEN_30.0PX" />
 
 
-        <com.mod.jishidai.widget.ClearEditText
+        <com.huatu.android.widget.ClearEditText
             android:id="@+id/etPwd"
             android:layout_gravity="center"
             android:layout_height="@dimen/DIMEN_68.0PX"

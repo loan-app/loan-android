@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.mod.jishidai.widget.TitleHeaderBar
+    <com.huatu.android.widget.TitleHeaderBar
         android:id="@+id/mTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,7 +18,7 @@
         android:background="@color/white"
         android:orientation="vertical">
 
-        <com.mod.jishidai.widget.PersonItemView
+        <com.huatu.android.widget.PersonItemView
             android:id="@+id/piAboutUs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -26,14 +26,14 @@
             app:show_icon="false"
             android:visibility="gone"/>
 
-        <com.mod.jishidai.widget.PersonItemView
+        <com.huatu.android.widget.PersonItemView
             android:id="@+id/piFeedBack"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:item_title="意见反馈"
             app:show_icon="false" />
 
-        <com.mod.jishidai.widget.PersonItemView
+        <com.huatu.android.widget.PersonItemView
             android:id="@+id/piUpdate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

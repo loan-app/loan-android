@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.mod.jishidai">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.huatu.android">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -28,15 +29,16 @@
         android:required="false" />
 
     <application
-        android:name="com.mod.jishidai.base.App"
+        android:name="com.huatu.android.base.App"
         android:allowBackup="true"
         android:icon="@mipmap/start_logo"
         android:roundIcon="@mipmap/start_logo"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
         <provider
             android:name="android.support.v4.content.FileProvider"
-            android:authorities="com.mod.jishidai.FileProvider"
+            android:authorities="com.huatu.android.FileProvider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
@@ -44,20 +46,20 @@
                 android:resource="@xml/rc_file_path" />
         </provider>
 
-       <!-- &lt;!&ndash; 友盟统计 &ndash;&gt;
-        <meta-data
-            android:name="UMENG_APPKEY"
-            android:value="5b4c58edf43e4879ba0000d7" />
-        <meta-data
-            android:name="UMENG_CHANNEL"
-            android:value="${UMENG_CHANNEL_VALUE}" />-->
+        <!-- &lt;!&ndash; 友盟统计 &ndash;&gt;
+         <meta-data
+             android:name="UMENG_APPKEY"
+             android:value="5b4c58edf43e4879ba0000d7" />
+         <meta-data
+             android:name="UMENG_CHANNEL"
+             android:value="${UMENG_CHANNEL_VALUE}" />-->
 
         <activity
-            android:name="com.mod.jishidai.ui.activity.main.MainActivity"
+            android:name="com.huatu.android.ui.activity.main.MainActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.mod.jishidai.ui.activity.splash.SplashActivity"
+            android:name="com.huatu.android.ui.activity.splash.SplashActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -67,11 +69,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.mod.jishidai.ui.activity.webview.WebViewActivity"
+            android:name="com.huatu.android.ui.activity.webview.WebViewActivity"
             android:hardwareAccelerated="true"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.mod.jishidai.ui.activity.login.LoginActivity"
+            android:name="com.huatu.android.ui.activity.login.LoginActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <!-- 摩羯座 -->
@@ -79,27 +81,27 @@
             android:name="com.moxie.client.MainActivity"
             android:theme="@android:style/Theme.NoTitleBar" />
         <activity
-            android:name="com.mod.jishidai.ui.activity.more.MoreActivity"
+            android:name="com.huatu.android.ui.activity.more.MoreActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.mod.jishidai.ui.activity.certification.CertificationActivity"
+            android:name="com.huatu.android.ui.activity.certification.CertificationActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.mod.jishidai.ui.activity.certification.CertificatContainActivity"
+            android:name="com.huatu.android.ui.activity.certification.CertificatContainActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.mod.jishidai.ui.activity.contact.ContactActivity"
+            android:name="com.huatu.android.ui.activity.contact.ContactActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.mod.jishidai.ui.activity.feedback.FeedbackActivity"
+            android:name="com.huatu.android.ui.activity.feedback.FeedbackActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.mod.jishidai.ui.activity.certification.Camera2Activity"
+            android:name="com.huatu.android.ui.activity.certification.Camera2Activity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
     </application>
