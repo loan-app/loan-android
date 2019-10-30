@@ -92,7 +92,7 @@ android {
             buildConfigField "String", "API_HOST", "${rootProject.ext.host["debug"]}"
             buildConfigField "String", "H5_HOST", "${rootProject.ext.host["H5_debug"]}"
             buildConfigField "String", "moxie_apikey", "${rootProject.ext.host["moxie_debug"]}"
-            buildConfigField "String", "alias", "\"huaqianguan\""
+            buildConfigField "String", "alias", "\"test\""
             resValue "string", "app_name", "兔子优钱_Debug"
             versionNameSuffix "_debug"//将debug版本的版本名设置为_debug 便于查看
             minifyEnabled false
@@ -111,7 +111,7 @@ android {
             buildConfigField "String", "API_HOST", "${rootProject.ext.host["release"]}"
             buildConfigField "String", "H5_HOST", "${rootProject.ext.host["H5_release"]}"
             buildConfigField "String", "moxie_apikey", "${rootProject.ext.host["moxie_release"]}"
-            buildConfigField "String", "alias", "\"huaqianguan\""
+            buildConfigField "String", "alias", "\"test\""
             resValue "string", "app_name", "兔子优钱"
             minifyEnabled true
             debuggable false

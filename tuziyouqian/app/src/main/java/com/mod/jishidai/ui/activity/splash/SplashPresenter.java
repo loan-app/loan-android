@@ -15,7 +15,7 @@ import com.mod.jishidai.utils.AppConfig;
 public class SplashPresenter extends SplashContract.Presenter {
 
 
-    @Override
+    /*@Override
     public void getSplash() {
         mModel.getSplash(App.getInstance().getToken()).subscribe(new RxSubscriber<BaseBean<SplashBean>>(mContext, mRxManage, false) {
             @Override
@@ -47,5 +47,5 @@ public class SplashPresenter extends SplashContract.Presenter {
 
             }
         });
-    }
+    }*/
 }

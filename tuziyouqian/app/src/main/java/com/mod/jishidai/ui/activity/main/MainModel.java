@@ -14,7 +14,7 @@ import io.reactivex.Flowable;
  */
 public class MainModel implements MainContract.Model {
 
-    @Override
+    /*@Override
     public Flowable<BaseBean> uploadDevice(HashMap<String, String> map) {
         return App.serverAPI.uploadDevice(map).compose(RxSchedulers.<BaseBean>io_main());
     }
@@ -23,5 +23,5 @@ public class MainModel implements MainContract.Model {
     public Flowable<BaseBean<VersionBean>> checkVersion(String token) {
         return App.serverAPI.checkVersion(token).compose(RxSchedulers.<BaseBean<VersionBean>>io_main());
     }
-
+*/
 }

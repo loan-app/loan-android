@@ -20,18 +20,18 @@ import io.reactivex.Flowable;
 public interface SplashContract {
 
     interface View extends BaseView {
-        void showPhoneData(PhoneBean bean);
-        void showSplash(SplashBean bean);
+        //void showPhoneData(PhoneBean bean);
+        //void showSplash(SplashBean bean);
     }
 
     interface Model extends BaseModel {
-        Flowable<BaseBean<PhoneBean>> searchPhone(String model, String memory);
-        Flowable<BaseBean<SplashBean>> getSplash(String token);
+       // Flowable<BaseBean<PhoneBean>> searchPhone(String model, String memory);
+        //Flowable<BaseBean<SplashBean>> getSplash(String token);
     }
 
     abstract static class Presenter extends BasePresenter<Model, View> {
-        public abstract void getSplash();
+        //public abstract void getSplash();
 
-        public abstract void searchPhone(String model, String memory);
+       // public abstract void searchPhone(String model, String memory);
     }
 }

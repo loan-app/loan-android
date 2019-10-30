@@ -14,16 +14,16 @@ import io.reactivex.Flowable;
  */
 public class HomeModel implements HomeContract.Model {
 
-    @Override
+   /* @Override
     public Flowable<BaseBean<LaunchBean>> getLaunchData() {
         return App.serverAPI.getLaunchData(App.getInstance().getToken()).compose(RxSchedulers.<BaseBean<LaunchBean>>io_main());
-    }
+    }*/
 
-    @Override
+   /* @Override
     public Flowable<BaseBean<BalanceBean>> getBalance(String token) {
         return App.serverAPI.getBalance(token).compose(RxSchedulers.<BaseBean<BalanceBean>>io_main());
     }
-
+*/
     @Override
     public Flowable<BaseBean<OrderBean>> getLoanData(String token) {
         return App.serverAPI.getLoanData(token).compose(RxSchedulers.<BaseBean<OrderBean>>io_main());

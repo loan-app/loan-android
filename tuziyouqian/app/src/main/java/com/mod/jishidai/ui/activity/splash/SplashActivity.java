@@ -50,13 +50,13 @@ public class SplashActivity extends BaseActivity<SplashPresenter, SplashModel> i
     @Override
     public void initView() {
         mImmersionBar.init();
-        mPresenter.searchPhone(App.getInstance().getPhoneModel(), AppUtils.getRomTotalSize());
-        mPresenter.getSplash();
+        //mPresenter.searchPhone(App.getInstance().getPhoneModel(), AppUtils.getRomTotalSize());
+        //mPresenter.getSplash();
         tv_skip.setVisibility(View.VISIBLE);
         mRxManager.add(RxHelper.countdown(3, new RxHelper.onCountdownOnClickListener() {
             @Override
             public void onCountdown(long num) {
-                tv_skip.setText("跳过 " + String.valueOf(num));
+                tv_skip.setText("跳过 " + num);
             }
 
             @Override
@@ -87,10 +87,10 @@ public class SplashActivity extends BaseActivity<SplashPresenter, SplashModel> i
         finish();
     }
 
-    @Override
+   /* @Override
     public void showPhoneData(PhoneBean bean) {
 
-    }
+    }*/
 
     @Override
     public void showLoading(String title) {
@@ -107,12 +107,12 @@ public class SplashActivity extends BaseActivity<SplashPresenter, SplashModel> i
 
     }
 
-    @Override
+   /* @Override
     public void showSplash(SplashBean bean) {
         if(bean!= null && bean.startup!=null) {
             showImage(bean.startup.imgurl, bean.startup.url);
         }
-    }
+    }*/
 
     private void showImage(String imgurl,String url){
         RequestOptions myOptions = new RequestOptions()

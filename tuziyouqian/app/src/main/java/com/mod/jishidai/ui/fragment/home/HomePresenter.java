@@ -17,7 +17,7 @@ import com.mod.jishidai.utils.AppConfig;
  */
 public class HomePresenter extends HomeContract.Presenter {
 
-    @Override
+    /*@Override
     public void getLaunchData() {
         String jsonLaunchData = SPUtils.getStringData(AppConfig.LAUNCH_DATA, null);
         if (!TextUtils.isEmpty(jsonLaunchData)) {
@@ -45,9 +45,9 @@ public class HomePresenter extends HomeContract.Presenter {
             }
         });
 
-    }
+    }*/
 
-    @Override
+    /*@Override
     public void getBalance() {
         mModel.getBalance(App.getInstance().getToken()).subscribe(new RxSubscriber<BaseBean<BalanceBean>>(mContext, mRxManage, false) {
             @Override
@@ -68,7 +68,7 @@ public class HomePresenter extends HomeContract.Presenter {
 
             }
         });
-    }
+    }*/
 
     @Override
     public void getLoanData() {

@@ -22,9 +22,9 @@ public interface HomeContract {
 
     interface View extends BaseView {
 
-        void showLaunchData(LaunchBean bean);
+       // void showLaunchData(LaunchBean bean);
 
-        void showBalanceBeanData(BalanceBean bean);
+       // void showBalanceBeanData(BalanceBean bean);
 
         void closeRefresh(boolean success);
 
@@ -36,9 +36,9 @@ public interface HomeContract {
 
     interface Model extends BaseModel {
 
-        Flowable<BaseBean<LaunchBean>> getLaunchData();
+        //Flowable<BaseBean<LaunchBean>> getLaunchData();
 
-        Flowable<BaseBean<BalanceBean>> getBalance(String token);
+       // Flowable<BaseBean<BalanceBean>> getBalance(String token);
 
         Flowable<BaseBean<OrderBean>> getLoanData(String token);
 
@@ -47,9 +47,9 @@ public interface HomeContract {
     }
 
     abstract static class Presenter extends BasePresenter<Model, View> {
-        public abstract void getLaunchData();
+       // public abstract void getLaunchData();
 
-        public abstract void getBalance();
+       // public abstract void getBalance();
 
         public abstract void getLoanData();
 

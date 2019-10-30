@@ -21,21 +21,21 @@ import io.reactivex.Flowable;
 public interface MainContract {
 
     interface View extends BaseView {
-        void showUpdateDialog(VersionBean versionBean);
+       // void showUpdateDialog(VersionBean versionBean);
 
     }
 
     interface Model extends BaseModel {
 
-        Flowable<BaseBean> uploadDevice(HashMap<String, String> map);
+       // Flowable<BaseBean> uploadDevice(HashMap<String, String> map);
 
-        Flowable<BaseBean<VersionBean>> checkVersion(String token);
+       // Flowable<BaseBean<VersionBean>> checkVersion(String token);
     }
 
     abstract static class Presenter extends BasePresenter<Model, View> {
-        public abstract void uploadDevice();
+        //public abstract void uploadDevice();
 
-        public abstract void checkVersion();
+       // public abstract void checkVersion();
 
     }
 }

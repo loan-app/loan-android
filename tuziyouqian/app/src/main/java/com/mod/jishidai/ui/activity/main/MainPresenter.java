@@ -16,7 +16,7 @@ import java.util.HashMap;
  */
 public class MainPresenter extends MainContract.Presenter {
 
-    @Override
+   /* @Override
     public void uploadDevice() {
         HashMap<String, String> map = new HashMap<>();
         map.put("token", App.getInstance().getToken());
@@ -62,7 +62,7 @@ public class MainPresenter extends MainContract.Presenter {
             }
         });
 
-    }
+    }*/
 
 
 }
