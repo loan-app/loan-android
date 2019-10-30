@@ -145,7 +145,6 @@ public class HomeFragment extends BaseFragment<HomePresenter, HomeModel> impleme
       return;
     switch (bean.orderStatus) {
       case "0"://0 直接进入评估页面
-//                mPresenter.searchPhone(App.getInstance().getPhoneModel(), AppUtils.getRomTotalSize());
         mPresenter.getLoanData();
         break;
       case "1"://1 进入流程，无按钮

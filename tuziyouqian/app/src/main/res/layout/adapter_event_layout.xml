@@ -26,10 +26,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
+                android:text="aaaaaaa"
                 android:textColor="@color/color_999999"
                 android:textSize="@dimen/DIMEN_28.0PX" />
 
             <TextView
+                android:text="湿答答撒打算"
                 android:id="@+id/tvEventTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -40,6 +42,7 @@
         </RelativeLayout>
 
         <TextView
+            android:text="撒打算大大的"
             android:id="@+id/tvEventDescribe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
