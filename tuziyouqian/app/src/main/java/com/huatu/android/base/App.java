@@ -7,6 +7,11 @@ import android.provider.Settings;
 import android.support.v4.content.ContextCompat;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
+
+import com.baidu.ocr.sdk.OCR;
+import com.baidu.ocr.sdk.OnResultListener;
+import com.baidu.ocr.sdk.exception.OCRError;
+import com.baidu.ocr.sdk.model.AccessToken;
 import com.google.gson.GsonBuilder;
 import com.lib.core.baseapp.BaseApplication;
 import com.lib.core.utils.JsonUtils;
@@ -57,28 +62,20 @@ public class App extends BaseApplication {
         mApp = this;
         LogUtils.logInit(BuildConfig.LOG_DEBUG);
         initApiService();
-        /*initUM();*/
-        MoxieSDK.init(this);//摩羯座
-        /**
-         * 初始化中各参数为必填参数，否则无法正常使用SDK功能；
-         * @param context 上下文
-         * @param xyOCRLicense  license
-         * @param xyOCRMemberId   商户号 8150728867
-         * @param xyOCRTerminalId  终端号
-         * @param openRiskRecognition 是否开启风险提示
-         */
-        XinyanOCRSDK.getInstents().setDebug(true);
-        XinyanOCRSDK.getInstents().init(this, AppConfig.LICENSE, AppConfig.MEMBER_ID, AppConfig.TERMINAL_ID, false);
-        /**
-         * 初始化库功能
-         * @param context 上下文
-         * @param memberId 商户号
-         * @param terminalId 终端号
-         * @param license 商户license信息
-         * @param playSound 是否播放活体检测声音
-         */
-        XinYanFaceSDK.getInstance().init(this, AppConfig.MEMBER_ID, AppConfig.TERMINAL_ID,  AppConfig.LICENSE,true);
-        XinYanFaceSDK.getInstance().setDebug(true);
+        OCR.getInstance(this).initAccessTokenWithAkSk(new OnResultListener<AccessToken>() {
+            @Override
+            public void onResult(AccessToken result) {
+                // 调用成功，返回AccessToken对象
+                String token = result.getAccessToken();
+                LogUtils.loge(token);
+            }
+            @Override
+            public void onError(OCRError error) {
+                // 调用失败，返回OCRError子类SDKError对象
+                LogUtils.loge(error.getMessage());
+
+            }
+        }, getApplicationContext(), "9DWZcwG6ZtgEtsgMTGaZjngf", "f9W9UiWmNwiUf4e7pSAR20xFrdGES2ty");
     }
 
 
