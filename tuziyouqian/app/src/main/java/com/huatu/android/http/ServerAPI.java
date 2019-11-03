@@ -3,6 +3,7 @@ package com.huatu.android.http;
 import com.huatu.android.BuildConfig;
 import com.huatu.android.bean.BalanceBean;
 import com.huatu.android.bean.BaseBean;
+import com.huatu.android.bean.CerBean;
 import com.huatu.android.bean.LaunchBean;
 import com.huatu.android.bean.OrderBean;
 import com.huatu.android.bean.PersonInfoBean;
@@ -135,6 +136,9 @@ public interface ServerAPI {
     Flowable<BaseBean<UploadBean>> uploadFile(@Part("token") RequestBody token, @Part MultipartBody.Part file);
 
 
+    @FormUrlEncoded
+    @POST("user_ident_info")
+    Flowable<BaseBean<CerBean>> getCerState(@Field("token") String token);
 
 
     /**

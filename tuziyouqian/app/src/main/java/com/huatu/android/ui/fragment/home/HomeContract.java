@@ -4,6 +4,7 @@ import com.huatu.android.base.mvp.BaseModel;
 import com.huatu.android.base.mvp.BasePresenter;
 import com.huatu.android.base.mvp.BaseView;
 import com.huatu.android.bean.BaseBean;
+import com.huatu.android.bean.CerBean;
 import com.huatu.android.bean.OrderBean;
 
 import io.reactivex.Flowable;
@@ -30,6 +31,8 @@ public interface HomeContract {
 
         void showOrderStatus(OrderBean bean);
 
+        void onGetCetState(CerBean cerBean);
+
     }
 
     interface Model extends BaseModel {
@@ -42,6 +45,9 @@ public interface HomeContract {
 
         Flowable<BaseBean<OrderBean>> getOrderStatus(String token);
 
+        Flowable<BaseBean<CerBean>>  getCerState(String token);
+
+
     }
 
     abstract static class Presenter extends BasePresenter<Model, View> {
@@ -52,6 +58,9 @@ public interface HomeContract {
         public abstract void getLoanData();
 
         public abstract void getOrderStatus();
+
+        public abstract void  getCerState();
+
 
     }
 }

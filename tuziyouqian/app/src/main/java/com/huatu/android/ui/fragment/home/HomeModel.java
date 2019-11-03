@@ -2,6 +2,7 @@ package com.huatu.android.ui.fragment.home;
 
 import com.huatu.android.base.App;
 import com.huatu.android.bean.BaseBean;
+import com.huatu.android.bean.CerBean;
 import com.huatu.android.bean.OrderBean;
 import com.huatu.android.http.RxSchedulers;
 
@@ -31,4 +32,9 @@ public class HomeModel implements HomeContract.Model {
     public Flowable<BaseBean<OrderBean>> getOrderStatus(String token) {
         return App.serverAPI.getOrderStatus(token).compose(RxSchedulers.<BaseBean<OrderBean>>io_main());
     }
+
+  @Override
+  public Flowable<BaseBean<CerBean>> getCerState(String token) {
+    return App.serverAPI.getCerState(token).compose(RxSchedulers.<BaseBean<CerBean>>io_main());
+  }
 }

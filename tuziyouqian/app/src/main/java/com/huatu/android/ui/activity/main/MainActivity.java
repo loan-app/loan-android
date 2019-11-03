@@ -14,6 +14,9 @@ import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.TextView;
 
+import com.huatu.android.bean.BaseBean;
+import com.huatu.android.bean.CerBean;
+import com.huatu.android.ui.activity.webview.WebViewActivity;
 import com.lib.core.utils.PermissionUtils;
 import com.lib.core.utils.ToastUtil;
 import com.lib.core.view.TabFragmentHost;
@@ -103,7 +106,6 @@ public class MainActivity extends BaseActivity<MainPresenter, MainModel> impleme
       }
     });
     mRxManager.on(AppConfig.RXMANAGER_LOGIN, new Consumer<Object>() {
-
       @Override
       public void accept(Object o) throws Exception {
         //mPresenter.uploadDevice();
@@ -396,7 +398,6 @@ public class MainActivity extends BaseActivity<MainPresenter, MainModel> impleme
   protected void onResume() {
     super.onResume();
     if (!isActive) {
-//        app 从后台唤醒，进入前台  通知首页刷新界面
       mRxManager.post(AppConfig.RXMANAGER_UPDATE, "");
       isActive = true;
     }

@@ -2,6 +2,7 @@ package com.huatu.android.ui.fragment.home;
 
 import com.huatu.android.base.App;
 import com.huatu.android.bean.BaseBean;
+import com.huatu.android.bean.CerBean;
 import com.huatu.android.bean.OrderBean;
 import com.huatu.android.http.RxSubscriber;
 
@@ -106,5 +107,22 @@ public class HomePresenter extends HomeContract.Presenter {
             }
         });
 
+    }
+
+
+    @Override
+    public void getCerState() {
+        mModel.getCerState(App.getInstance().getToken())
+            .subscribe(new RxSubscriber<BaseBean<CerBean>>(mContext, mRxManage, false) {
+                @Override
+                protected void onSuccess(BaseBean<CerBean> cerBean) {
+                    mView.onGetCetState(cerBean.data);
+                }
+
+                @Override
+                protected void onFailed(String code, String msg) {
+                    mView.onGetCetState(null);
+                }
+            });
     }
 }

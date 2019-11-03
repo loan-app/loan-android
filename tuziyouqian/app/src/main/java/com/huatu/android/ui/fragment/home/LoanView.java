@@ -31,6 +31,8 @@ public class LoanView extends LinearLayout {
   TextView tvSum, tvTitle/*,tvDetail*/;
   Context mContext;
 
+  private LoanViewListener loanViewListener;
+
 
   public LoanView(Context context) {
     this(context, null);
@@ -66,15 +68,20 @@ public class LoanView extends LinearLayout {
 
   private void toNext(OrderBean bean) {
     if (App.getInstance().isLogin()) {
-      Intent intent = new Intent(mContext, CertificatContainActivity.class);
-      Bundle bundle = new Bundle();
-      bundle.putInt("type", 0);
-      // Intent intent = new Intent(mContext, WebViewActivity.class);
-      //intent.putExtra(WebViewFragment.WEB_URL, bean.url);
-      mContext.startActivity(intent, bundle);
+     if (loanViewListener!= null) {
+       loanViewListener.checkCerState();
+     }
     } else {
       Intent intent = new Intent(mContext, LoginActivity.class);
       mContext.startActivity(intent);
     }
+  }
+
+  public void setLoanViewListener(LoanViewListener loanViewListener) {
+    this.loanViewListener = loanViewListener;
+  }
+
+  public interface LoanViewListener {
+    public void checkCerState();
   }
 }

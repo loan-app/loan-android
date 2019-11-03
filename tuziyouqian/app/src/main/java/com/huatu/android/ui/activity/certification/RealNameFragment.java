@@ -34,7 +34,9 @@ import com.huatu.android.widget.dialog.AppUpdateDialog;
 import com.huatu.android.widget.dialog.ConfirmDialog;
 import com.zxy.tiny.Tiny;
 import com.zxy.tiny.callback.FileCallback;
+
 import java.io.File;
+
 import butterknife.BindView;
 import butterknife.OnClick;
 
@@ -48,8 +50,6 @@ import butterknife.OnClick;
  * 终端号1902150652。商户8150728867
  */
 public class RealNameFragment extends BaseFragment<CertificatPresenter, CertificatModel> implements CertificatContract.View {
-
-
   @BindView(R.id.mTitle)
   TitleHeaderBar mTitle;
   @BindView(R.id.ivCard1)
@@ -309,7 +309,7 @@ public class RealNameFragment extends BaseFragment<CertificatPresenter, Certific
         LogUtils.loge(idCardBackPath);
         ImageLoaderUtils.display(_mActivity, ivCard2, idCardBackPath);
         IDCardParams param = new IDCardParams();
-        param.setImageFile(new File(idCardFrontPath));
+        param.setImageFile(new File(idCardBackPath));
         param.setIdCardSide(IDCardParams.ID_CARD_SIDE_BACK);
         OCR.getInstance(_mActivity).recognizeIDCard(param, new OnResultListener<IDCardResult>() {
           @Override
@@ -319,8 +319,10 @@ public class RealNameFragment extends BaseFragment<CertificatPresenter, Certific
             if (result.getIssueAuthority() != null) {
               ia = result.getIssueAuthority().getWords();
             }
-            if (result.getExpiryDate() != null) {
-              indate = result.getExpiryDate().getWords();
+            if (result.getExpiryDate() != null && result.getSignDate() != null) {
+              String singDate = result.getSignDate().getWords();
+              String expiryDate = result.getExpiryDate().getWords();
+              indate = singDate + "-" + expiryDate;
             }
           }
 
@@ -332,6 +334,7 @@ public class RealNameFragment extends BaseFragment<CertificatPresenter, Certific
       }
     }
   }
+
 
   @Override
   public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {

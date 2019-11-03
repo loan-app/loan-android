@@ -1,9 +1,15 @@
 package com.huatu.android.ui.activity.main;
 
+import com.huatu.android.base.App;
+import com.huatu.android.bean.BaseBean;
+import com.huatu.android.bean.CerBean;
+import com.huatu.android.http.RxSubscriber;
+
 /**
  * Created by TMVPHelper on 2018/04/29
  */
 public class MainPresenter extends MainContract.Presenter {
+
 
    /* @Override
     public void uploadDevice() {

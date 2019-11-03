@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
+import com.huatu.android.bean.CerBean;
+import com.huatu.android.ui.activity.certification.CertificatContainActivity;
 import com.lib.core.utils.ToastUtil;
 import com.huatu.android.R;
 import com.huatu.android.base.App;
@@ -135,6 +137,12 @@ public class HomeFragment extends BaseFragment<HomePresenter, HomeModel> impleme
     mContent.removeAllViews();
     mContent.addView(loanView);
     loanView.setData(bean);
+    loanView.setLoanViewListener(new LoanView.LoanViewListener() {
+      @Override
+      public void checkCerState() {
+        mPresenter.getCerState();
+      }
+    });
   }
 
 
@@ -187,5 +195,30 @@ public class HomeFragment extends BaseFragment<HomePresenter, HomeModel> impleme
         break;
     }
 
+  }
+
+  @Override
+  public void onGetCetState(CerBean cerBean) {
+    if (cerBean.realName == 0) {
+      //去实名认证
+      Bundle bundle = new Bundle();
+      bundle.putInt("type", 0);
+      startActivity(CertificatContainActivity.class, bundle);
+      return;
+    }
+    if (cerBean.userDetails == 0) {
+      //去信息完善
+      Bundle bundle = new Bundle();
+      bundle.putInt("type", 1);
+      startActivity(CertificatContainActivity.class, bundle);
+      return;
+    }
+    if (cerBean.liveness == 0) {
+      //去扫脸
+      return;
+    }
+    //认证完成，去web页面
+
+    startActivity(WebViewActivity.class);
   }
 }

@@ -3,6 +3,10 @@ package com.huatu.android.ui.activity.main;
 import com.huatu.android.base.mvp.BaseModel;
 import com.huatu.android.base.mvp.BasePresenter;
 import com.huatu.android.base.mvp.BaseView;
+import com.huatu.android.bean.BaseBean;
+import com.huatu.android.bean.CerBean;
+
+import io.reactivex.Flowable;
 
 /**
  * @author 周竹
@@ -17,9 +21,11 @@ public interface MainContract {
     interface View extends BaseView {
        // void showUpdateDialog(VersionBean versionBean);
 
+
     }
 
     interface Model extends BaseModel {
+
 
        // Flowable<BaseBean> uploadDevice(HashMap<String, String> map);
 
@@ -30,6 +36,7 @@ public interface MainContract {
         //public abstract void uploadDevice();
 
        // public abstract void checkVersion();
+
 
     }
 }
