@@ -229,13 +229,15 @@ public class FaceScanFragment extends BaseFragment<CertificatPresenter, Certific
 
 
   private void takePhoto() {
-    filePath = FileUtil.getSaveFile(_mActivity).getAbsolutePath();
-    Intent intent = new Intent(_mActivity, CameraActivity.class);
+    //filePath = FileUtil.getSaveFile(_mActivity).getAbsolutePath();
+    /*Intent intent = new Intent(_mActivity, CameraActivity.class);
     intent.putExtra(CameraActivity.KEY_OUTPUT_FILE_PATH, filePath);
     intent.putExtra(CameraActivity.KEY_CONTENT_TYPE,
         CameraActivity.CONTENT_TYPE_GENERAL);
     intent.putExtra(CameraActivity.FACING, 1);
-    startActivityForResult(intent, CODE_TAKE_PHOTO);
+    startActivityForResult(intent, CODE_TAKE_PHOTO);*/
+    Intent intent = new Intent(_mActivity,Camera2Activity.class);
+    startActivityForResult(intent,CODE_TAKE_PHOTO);
 
   }
 
@@ -243,6 +245,7 @@ public class FaceScanFragment extends BaseFragment<CertificatPresenter, Certific
   public void onActivityResult(int requestCode, int resultCode, Intent data) {
     super.onActivityResult(requestCode, resultCode, data);
     if (requestCode == CODE_TAKE_PHOTO && resultCode == RESULT_OK) {
+      filePath = data.getStringExtra("picturePath");
       ImageLoaderUtils.display(_mActivity, ivScan, filePath);
       commit();
     }

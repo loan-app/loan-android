@@ -199,21 +199,21 @@ public class HomeFragment extends BaseFragment<HomePresenter, HomeModel> impleme
 
   @Override
   public void onGetCetState(CerBean cerBean) {
-    if (cerBean.realName == 0) {
+    if (cerBean.realName != 2) {
       //去实名认证
       Bundle bundle = new Bundle();
       bundle.putInt("type", 0);
       startActivity(CertificatContainActivity.class, bundle);
       return;
     }
-    if (cerBean.userDetails == 0) {
+    if (cerBean.userDetails != 2) {
       //去信息完善
       Bundle bundle = new Bundle();
       bundle.putInt("type", 1);
       startActivity(CertificatContainActivity.class, bundle);
       return;
     }
-    if (cerBean.liveness == 0) {
+    if (cerBean.liveness != 2) {
       //去扫脸
       Bundle bundle = new Bundle();
       bundle.putInt("type", 2);

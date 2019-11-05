@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import com.google.android.cameraview.CameraView;
 import com.huatu.android.R;
 import com.huatu.android.base.BaseActivity;
+import com.huatu.android.utils.FileUtil;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -66,8 +67,7 @@ public class Camera2Activity extends BaseActivity {
             getBackgroundHandler().post(new Runnable() {
                 @Override
                 public void run() {
-                    File file = new File(getExternalFilesDir(Environment.DIRECTORY_PICTURES),
-                            "picture.jpg");
+                    File file = FileUtil.getSaveFile(Camera2Activity.this);
                     OutputStream os = null;
                     try {
                         os = new FileOutputStream(file);
