@@ -40,6 +40,8 @@ import java.io.File;
 import butterknife.BindView;
 import butterknife.OnClick;
 
+import static com.huatu.android.utils.AppConfig.RXMANAFER_CER_NEXT;
+
 /**
  * @author 周竹
  * @file RealNameFragment
@@ -385,12 +387,16 @@ public class RealNameFragment extends BaseFragment<CertificatPresenter, Certific
   @Override
   public void saveRealNameSuccess() {
     stopProgressDialog();
-    _mActivity.finish();
-
+    mRxManager.post(RXMANAFER_CER_NEXT,1);
   }
 
   @Override
   public void showUserInfo(PersonInfoBean infoBean) {
+
+  }
+
+  @Override
+  public void saveUserInfoSuccess() {
 
   }
 

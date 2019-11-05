@@ -140,6 +140,11 @@ public class CertificationActivity extends BaseActivity<CertificatPresenter, Cer
     public void showUserInfo(PersonInfoBean infoBean) {
 
     }
+
+    @Override
+    public void saveUserInfoSuccess() {
+
+    }
 /*
     @Override
     public void showFaceCheckSuccess() {

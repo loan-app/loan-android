@@ -20,6 +20,7 @@ public class AppConfig {
     public static final String TOKEN_OVERDUE = "4002";
     public static final String RXMANAGER_UPDATE = "rxManager_Update";//通知刷新
     public static final String RXMANAGER_LOGIN = "rxManager_Login";//通知登录成功，上传deviceId
+    public static final String RXMANAFER_CER_NEXT = "rxManager_Cer_next";
     public static final String PHONE_MODEL = "phone_model";
     public static final String LAUNCH_DATA = "LaunchData";//保存启动页轮播图和通知
     public static String FAILURE_ORDERID = "FAILURE_ORDERID";//保存失败订单(用户名加订单id) 审核失败只提醒一次，跟这个字段判断

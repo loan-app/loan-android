@@ -10,6 +10,8 @@ import com.huatu.android.http.RxSubscriber;
 
 import java.util.Map;
 
+import static com.huatu.android.utils.AppConfig.RXMANAFER_CER_NEXT;
+
 /**
  * Created by TMVPHelper on 2018/04/23
  */
@@ -87,10 +89,8 @@ public class CertificatPresenter extends CertificatContract.Presenter {
             @Override
             protected void onSuccess(BaseBean baseBean) {
                 if (mView != null) {
-//                    mView.showToast("提交成功");
-                    if (mContext instanceof Activity) {
-                        ((Activity) mContext).finish();
-                    }
+                   mView.showToast("提交成功");
+                   mView.saveUserInfoSuccess();
                 }
 
             }

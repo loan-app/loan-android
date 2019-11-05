@@ -28,7 +28,9 @@ public interface CertificatContract {
 
         void showUserInfo(PersonInfoBean infoBean);
 
-/*        void showFaceCheckSuccess();*/
+        void saveUserInfoSuccess();
+
+        /*        void showFaceCheckSuccess();*/
     }
 
     interface Model extends BaseModel {

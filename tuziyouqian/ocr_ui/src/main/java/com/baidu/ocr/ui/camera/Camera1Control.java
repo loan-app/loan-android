@@ -32,6 +32,7 @@ public class Camera1Control implements ICameraControl {
 
     private int displayOrientation = 0;
     private int cameraId = 0;
+    private int face = 0;
     private int flashMode;
     private AtomicBoolean takingPicture = new AtomicBoolean(false);
     private AtomicBoolean abortingScan = new AtomicBoolean(false);
@@ -75,6 +76,10 @@ public class Camera1Control implements ICameraControl {
         detectCallback = callback;
     }
 
+    public void setFace(int face) {
+        this.face = face;
+    }
+
     private void onRequestDetect(byte[] data) {
         // 相机已经关闭
         if (camera == null || data == null || optSize == null) {
@@ -109,13 +114,13 @@ public class Camera1Control implements ICameraControl {
         this.displayOrientation = displayOrientation;
         switch (displayOrientation) {
             case CameraView.ORIENTATION_PORTRAIT:
-                rotation = 90;
+                rotation = face== 0 ? 90 : 180;
                 break;
             case CameraView.ORIENTATION_HORIZONTAL:
                 rotation = 0;
                 break;
             case CameraView.ORIENTATION_INVERT:
-                rotation = 180;
+                rotation = face== 0 ? 180 : 90;
                 break;
             default:
                 rotation = 0;
@@ -206,13 +211,13 @@ public class Camera1Control implements ICameraControl {
         }
         switch (displayOrientation) {
             case CameraView.ORIENTATION_PORTRAIT:
-                parameters.setRotation(90);
+                parameters.setRotation(face == 0 ? 90 : 270);
                 break;
             case CameraView.ORIENTATION_HORIZONTAL:
                 parameters.setRotation(0);
                 break;
             case CameraView.ORIENTATION_INVERT:
-                parameters.setRotation(180);
+                parameters.setRotation(face == 0 ? 270 :90);
                 break;
         }
         try {
@@ -324,7 +329,7 @@ public class Camera1Control implements ICameraControl {
                 Camera.CameraInfo cameraInfo = new Camera.CameraInfo();
                 for (int i = 0; i < Camera.getNumberOfCameras(); i++) {
                     Camera.getCameraInfo(i, cameraInfo);
-                    if (cameraInfo.facing == Camera.CameraInfo.CAMERA_FACING_BACK) {
+                    if (cameraInfo.facing == face) {
                         cameraId = i;
                     }
                 }

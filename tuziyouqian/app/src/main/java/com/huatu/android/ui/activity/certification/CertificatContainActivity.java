@@ -1,13 +1,16 @@
 package com.huatu.android.ui.activity.certification;
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.view.View;
 
 import com.huatu.android.R;
 import com.huatu.android.base.BaseActivity;
+import com.huatu.android.utils.AppConfig;
 import com.huatu.android.widget.TitleHeaderBar;
 
 import butterknife.BindView;
+import io.reactivex.functions.Consumer;
 
 /**
  * @author 周竹
@@ -36,6 +39,23 @@ public class CertificatContainActivity extends BaseActivity {
   @Override
   public void initPresenter() {
 
+  }
+
+  @Override
+  protected void onCreate(@Nullable Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    mRxManager.on(AppConfig.RXMANAFER_CER_NEXT, new Consumer<Object>() {
+      @Override
+      public void accept(Object o) throws Exception {
+        int type = (int) o;
+        if (type == 1) {
+          loadRootFragment(R.id.mContainer, PersonalInfoFragment.newInstance());
+        }
+        if (type == 2) {
+          loadRootFragment(R.id.mContainer, FaceScanFragment.newInstance());
+        }
+      }
+    });
   }
 
   @Override

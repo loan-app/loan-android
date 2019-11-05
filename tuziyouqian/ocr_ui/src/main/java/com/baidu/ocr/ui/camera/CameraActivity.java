@@ -46,6 +46,7 @@ public class CameraActivity extends Activity {
     public static final String CONTENT_TYPE_ID_CARD_BACK = "IDCardBack";
     public static final String CONTENT_TYPE_BANK_CARD = "bankCard";
     public static final String CONTENT_TYPE_PASSPORT = "passport";
+    public static final String FACING = "facing";
 
     private static final int REQUEST_CODE_PICK_IMAGE = 100;
     private static final int PERMISSIONS_REQUEST_CAMERA = 800;
@@ -58,6 +59,7 @@ public class CameraActivity extends Activity {
 
     private boolean isNativeEnable;
     private boolean isNativeManual;
+    private int face;
 
     private OCRCameraLayout takePictureContainer;
     private OCRCameraLayout cropContainer;
@@ -112,6 +114,7 @@ public class CameraActivity extends Activity {
 
         setOrientation(getResources().getConfiguration());
         initParams();
+        cameraView.setFace(face);
 
         cameraView.setAutoPictureCallback(autoTakePictureCallback);
     }
@@ -153,6 +156,8 @@ public class CameraActivity extends Activity {
         if (outputPath != null) {
             outputFile = new File(outputPath);
         }
+
+        face = getIntent().getIntExtra(FACING, 0);
 
         contentType = getIntent().getStringExtra(KEY_CONTENT_TYPE);
         if (contentType == null) {

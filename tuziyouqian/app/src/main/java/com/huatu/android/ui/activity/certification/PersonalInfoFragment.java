@@ -36,6 +36,8 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.OnClick;
 
+import static com.huatu.android.utils.AppConfig.RXMANAFER_CER_NEXT;
+
 /**
  * @author 周竹
  * @file PersonalInfoFragment
@@ -134,7 +136,6 @@ public class PersonalInfoFragment extends BaseFragment<CertificatPresenter, Cert
             @Override
             public void onClick(View view) {
                 saveUserInfo();
-
             }
         });
         mOneSelectPicker = new OptionsPickerBuilder(_mActivity, new OnOptionsSelectListener() {
@@ -545,6 +546,11 @@ public class PersonalInfoFragment extends BaseFragment<CertificatPresenter, Cert
         }
     }
 
+    @Override
+    public void saveUserInfoSuccess() {
+        mRxManager.post(RXMANAFER_CER_NEXT,2);
+    }
+
     /**
      * String directContactName;
      * String othersContactName;
@@ -575,5 +581,11 @@ public class PersonalInfoFragment extends BaseFragment<CertificatPresenter, Cert
     public void showToast(String msg) {
         ToastUtil.showShort(msg);
 
+    }
+
+    @Override
+    public boolean onBackPressedSupport() {
+        _mActivity.finish();
+        return true;
     }
 }

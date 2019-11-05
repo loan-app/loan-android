@@ -215,6 +215,9 @@ public class HomeFragment extends BaseFragment<HomePresenter, HomeModel> impleme
     }
     if (cerBean.liveness == 0) {
       //去扫脸
+      Bundle bundle = new Bundle();
+      bundle.putInt("type", 2);
+      startActivity(CertificatContainActivity.class, bundle);
       return;
     }
     //认证完成，去web页面

@@ -214,6 +214,11 @@ public class ContactActivity extends BaseActivity<CertificatPresenter, Certifica
 
     }
 
+    @Override
+    public void saveUserInfoSuccess() {
+
+    }
+
 /*    @Override
     public void showFaceCheckSuccess() {
 

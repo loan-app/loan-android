@@ -39,6 +39,12 @@ import android.widget.TextView;
 public class CameraView extends FrameLayout {
 
     private int maskType;
+    private int face;
+
+    public void setFace(int face) {
+        this.face = face;
+        ((Camera1Control)cameraControl).setFace(face);
+    }
 
     /**
      * 照相回调
@@ -445,7 +451,6 @@ public class CameraView extends FrameLayout {
 //
 //        }
         cameraControl = new Camera1Control(getContext());
-
         displayView = cameraControl.getDisplayView();
         addView(displayView);
 
