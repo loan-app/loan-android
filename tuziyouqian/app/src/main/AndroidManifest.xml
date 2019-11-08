@@ -104,6 +104,7 @@
             android:name="com.huatu.android.ui.activity.certification.Camera2Activity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
+      <activity android:name=".ui.activity.certification.OperatorActivity" />
     </application>
 
 </manifest>

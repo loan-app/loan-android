@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 import com.huatu.android.bean.BaseBean;
 import com.huatu.android.bean.CerBean;
+import com.huatu.android.ui.activity.certification.OperatorActivity;
 import com.huatu.android.ui.activity.webview.WebViewActivity;
 import com.lib.core.utils.PermissionUtils;
 import com.lib.core.utils.ToastUtil;
@@ -175,10 +176,11 @@ public class MainActivity extends BaseActivity<MainPresenter, MainModel> impleme
     if ((currentTime - startTime) >= 2000) {
       ToastUtil.showShort(R.string.app_exit);
       startTime = currentTime;
+      Intent intent = new Intent(MainActivity.this, OperatorActivity.class);
+      startActivity(intent);
     } else {
       AppUtils.appExit(this, true);
     }
-
   }
 
     /*@Override
