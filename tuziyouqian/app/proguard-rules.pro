@@ -249,7 +249,7 @@
 -keepclassmembers class * {
    public <init> (org.json.JSONObject);
 }
--keep public class [com.mod.tuziyouqian].R$*{
+-keep public class [com.huatu.android].R$*{
 public static final int *;
 }
 #友盟
@@ -259,14 +259,14 @@ public static final int *;
  #透明状态栏
 
  #保持自定义实体类不被混淆
- -keep class com.mod.tuziyouqian.bean.** {*;}
- -keep public class * implements com.mod.tuziyouqian.base.mvp.BaseView
- -keep public class * implements com.mod.tuziyouqian.base.mvp.BaseModel
- -keep public class * extends com.mod.tuziyouqian.base.mvp.BasePresenter
+ -keep class com.huatu.android.bean.** {*;}
+ -keep public class * implements com.huatu.android.base.mvp.BaseView
+ -keep public class * implements com.huatu.android.base.mvp.BaseModel
+ -keep public class * extends com.huatu.android.base.mvp.BasePresenter
   #保持自定义实体类不被混淆
 
   #webview交互不混淆
-  -keepclassmembernames class com.mod.tuziyouqian.ui.activity.webview.WebViewFragment {*;}
+  -keepclassmembernames class com.huatu.android.ui.activity.webview.WebViewFragment {*;}
    #webview交互不混淆
 
 

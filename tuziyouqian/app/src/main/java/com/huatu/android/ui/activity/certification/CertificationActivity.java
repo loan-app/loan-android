@@ -13,11 +13,6 @@ import com.huatu.android.bean.PersonInfoBean;
 import com.huatu.android.bean.RealNameBean;
 import com.huatu.android.widget.PersonItemView;
 import com.huatu.android.widget.TitleHeaderBar;
-import com.moxie.client.manager.MoxieCallBack;
-import com.moxie.client.manager.MoxieCallBackData;
-import com.moxie.client.manager.MoxieContext;
-import com.moxie.client.manager.MoxieSDK;
-import com.moxie.client.model.MxParam;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -85,30 +80,10 @@ public class CertificationActivity extends BaseActivity<CertificatPresenter, Cer
                 break;
             case R.id.piPhone:
 
-                MxParam mxParam1 = new MxParam();
-                mxParam1.setUserId(mUserId);
-                mxParam1.setApiKey(mApiKey);
-                mxParam1.setFunction(MxParam.PARAM_FUNCTION_CARRIER);
-                MoxieSDK.getInstance().start(this, mxParam1, new MoxieCallBack() {
-                    @Override
-                    public boolean callback(MoxieContext moxieContext, MoxieCallBackData moxieCallBackData) {
-                        String s = "成功";
-                        return super.callback(moxieContext, moxieCallBackData);
-                    }
-                });
+
                 break;
             case R.id.piAliPay:
-                MxParam mxParam = new MxParam();
-                mxParam.setUserId(mUserId);
-                mxParam.setApiKey(mApiKey);
-                mxParam.setFunction(MxParam.PARAM_FUNCTION_ALIPAY);
-                MoxieSDK.getInstance().start(this, mxParam, new MoxieCallBack() {
-                    @Override
-                    public boolean callback(MoxieContext moxieContext, MoxieCallBackData moxieCallBackData) {
-                        String s = "成功";
-                        return super.callback(moxieContext, moxieCallBackData);
-                    }
-                });
+
                 break;
             case R.id.piFace:
                 bundle.putInt("type", 2);

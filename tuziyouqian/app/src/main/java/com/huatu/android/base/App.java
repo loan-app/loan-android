@@ -25,7 +25,6 @@ import com.huatu.android.bean.SplashBean;
 import com.huatu.android.http.MyInterceptor;
 import com.huatu.android.http.ServerAPI;
 import com.huatu.android.utils.AppConfig;
-import com.moxie.client.manager.MoxieSDK;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.DefaultRefreshFooterCreator;
 import com.scwang.smartrefresh.layout.api.DefaultRefreshHeaderCreator;
@@ -39,12 +38,10 @@ import com.umeng.analytics.MobclickAgent;
 import com.umeng.commonsdk.UMConfigure;
 import com.umeng.message.IUmengRegisterCallback;
 import com.umeng.message.PushAgent;
-import com.xinyan.facecheck.XinYanFaceSDK;
 
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
-import ocr.android.xinyan.com.xinyan_android_ocr_sdk.XinyanOCRSDK;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;

@@ -74,7 +74,7 @@ public class UrlFactory {
      * @return
      */
     public static String getBankCardUrl() {
-        return new StringBuffer(H5_URL).append("/user/bank_card.html").toString();
+        return new StringBuffer(H5_URL).append("/user/bank_card").toString();
     }
 
     /**
@@ -83,7 +83,7 @@ public class UrlFactory {
      * @return
      */
     public static String getOrderHistoryUrl() {
-        return new StringBuffer(H5_URL).append("/order/store_order_history.html").toString();
+        return new StringBuffer(H5_URL).append("/order/store_order_history").toString();
     }
 
     /**
@@ -93,6 +93,16 @@ public class UrlFactory {
      */
     public static String getDealUrl() {
         return new StringBuffer(H5_URL).append("/agreement/register.html").toString();
+    }
+
+
+    /**
+     * 注册服务协议
+     *
+     * @return
+     */
+    public static String getRegisterUrl() {
+        return new StringBuffer(H5_URL).append("/agreement/register").toString();
     }
 
 

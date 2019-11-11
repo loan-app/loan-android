@@ -8,6 +8,7 @@ import android.widget.ImageView;
 
 import com.huatu.android.bean.CerBean;
 import com.huatu.android.ui.activity.certification.CertificatContainActivity;
+import com.huatu.android.ui.activity.certification.OperatorActivity;
 import com.lib.core.utils.ToastUtil;
 import com.huatu.android.R;
 import com.huatu.android.base.App;
@@ -220,8 +221,11 @@ public class HomeFragment extends BaseFragment<HomePresenter, HomeModel> impleme
       startActivity(CertificatContainActivity.class, bundle);
       return;
     }
+    if (cerBean.mobile != 2) {
+      startActivity(OperatorActivity.class);
+      return;
+    }
     //认证完成，去web页面
-
     startActivity(WebViewActivity.class);
   }
 }

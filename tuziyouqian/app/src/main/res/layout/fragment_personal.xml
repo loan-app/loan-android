@@ -40,7 +40,7 @@
                 android:orientation="horizontal"
                 >
                 <android.support.v7.widget.CardView
-                    android:id="@+id/ptInfo"
+                    android:id="@+id/ptRecord"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -62,69 +62,55 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/my_profile"
+                            android:text="我的账单"
                             android:textColor="@color/color_333333"
                             android:textSize="@dimen/DIMEN_32.0PX"
-                            />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="参看资料"
-                            android:textColor="@color/color_999999"
-                            android:textSize="@dimen/DIMEN_28.0PX"
                             />
 
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
-                <android.support.v7.widget.CardView
-                    android:id="@+id/ptRecord"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/DIMEN_30.0PX"
-                    android:layout_marginRight="@dimen/DIMEN_30.0PX"
-                    android:layout_marginTop="@dimen/DIMEN_30.0PX"
-                    android:layout_marginLeft="@dimen/DIMEN_15.0PX"
-                    android:layout_weight="1"
-                    app:cardElevation="10dp"
-                    app:cardBackgroundColor="@color/color_10000000">
-                    >
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/DIMEN_184.0PX"
-                        android:background="@color/white"
-                        android:orientation="vertical"
-                        android:paddingLeft="@dimen/DIMEN_44.0PX"
-                        android:gravity="left|center_vertical">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="借款记录"
-                            android:textColor="@color/color_333333"
-                            android:textSize="@dimen/DIMEN_32.0PX"
-                            />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="参看记录"
-                            android:textColor="@color/color_999999"
-                            android:textSize="@dimen/DIMEN_28.0PX"
-                            />
-
-                    </LinearLayout>
-                </android.support.v7.widget.CardView>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                >
                 <android.support.v7.widget.CardView
                     android:id="@+id/ptBank"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/DIMEN_30.0PX"
+                    android:layout_marginRight="@dimen/DIMEN_30.0PX"
+                    android:layout_marginTop="@dimen/DIMEN_30.0PX"
+                    android:layout_marginLeft="@dimen/DIMEN_15.0PX"
+                    android:layout_weight="1"
+                    app:cardElevation="10dp"
+                    app:cardBackgroundColor="@color/color_10000000">
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/DIMEN_184.0PX"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/DIMEN_44.0PX"
+                        android:gravity="left|center_vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="我的银行卡"
+                            android:textColor="@color/color_333333"
+                            android:textSize="@dimen/DIMEN_32.0PX"
+                            />
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <android.support.v7.widget.CardView
+                    android:id="@+id/register"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginLeft="@dimen/DIMEN_30.0PX"
                     android:layout_marginRight="@dimen/DIMEN_15.0PX"
@@ -142,22 +128,15 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/bank_card"
+                            android:text="注册协议"
                             android:textColor="@color/color_333333"
                             android:textSize="@dimen/DIMEN_32.0PX"
-                            />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="参看银行卡"
-                            android:textColor="@color/color_999999"
-                            android:textSize="@dimen/DIMEN_28.0PX"
                             />
 
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
                 <android.support.v7.widget.CardView
-                    android:id="@+id/ptHelp"
+                    android:id="@+id/money"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -178,16 +157,9 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/help_center"
+                            android:text="贷款协议"
                             android:textColor="@color/color_333333"
                             android:textSize="@dimen/DIMEN_32.0PX"
-                            />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="参看帮助中心"
-                            android:textColor="@color/color_999999"
-                            android:textSize="@dimen/DIMEN_28.0PX"
                             />
 
                     </LinearLayout>
@@ -201,7 +173,7 @@
                 android:orientation="horizontal"
                 >
                 <android.support.v7.widget.CardView
-                    android:id="@+id/ptMore"
+                    android:id="@+id/logout"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -222,17 +194,11 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/more"
+                            android:text="更多"
                             android:textColor="@color/color_333333"
                             android:textSize="@dimen/DIMEN_32.0PX"
                             />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="参看更多"
-                            android:textColor="@color/color_999999"
-                            android:textSize="@dimen/DIMEN_28.0PX"
-                            />
+
 
                     </LinearLayout>
                 </android.support.v7.widget.CardView>

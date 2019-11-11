@@ -34,16 +34,16 @@ import io.reactivex.functions.Consumer;
 public class PersonalFragment extends BaseFragment<PersonalPresenter, PersonalModel> implements PersonalContract.View {
     @BindView(R.id.mTitle)
     TitleHeaderBar mTitle;
-    @BindView(R.id.ptInfo)
-    CardView ptInfo;
+    @BindView(R.id.register)
+    CardView ptRegister;
     @BindView(R.id.ptRecord)
     CardView ptRecord;
     @BindView(R.id.ptBank)
     CardView ptBank;
-    @BindView(R.id.ptHelp)
-    CardView ptHelp;
-    @BindView(R.id.ptMore)
-    CardView ptMore;
+    @BindView(R.id.money)
+    CardView ptMoney;
+    @BindView(R.id.logout)
+    CardView pLogout;
     @BindView(R.id.tvPhone)
     TextView tvPhone;
 
@@ -85,7 +85,7 @@ public class PersonalFragment extends BaseFragment<PersonalPresenter, PersonalMo
     }
 
 
-    @OnClick({R.id.ptInfo, R.id.ptRecord, R.id.ptBank, R.id.ptHelp, R.id.ptMore, R.id.tvPhone})
+    @OnClick({R.id.register, R.id.ptRecord, R.id.ptBank, R.id.money, R.id.logout, R.id.tvPhone})
     public void onViewClicked(View view) {
         if (!App.getInstance().isLogin()) {
             startActivity(LoginActivity.class);
@@ -93,8 +93,8 @@ public class PersonalFragment extends BaseFragment<PersonalPresenter, PersonalMo
         }
         Bundle bundle = new Bundle();
         switch (view.getId()) {
-            case R.id.ptInfo:
-                bundle.putString(WebViewFragment.WEB_URL, UrlFactory.getCertCenterUrl());
+            case R.id.register:
+                bundle.putString(WebViewFragment.WEB_URL, UrlFactory.getRegisterUrl());
                 startActivity(WebViewActivity.class, bundle);
                 break;
             case R.id.ptRecord:
@@ -105,11 +105,11 @@ public class PersonalFragment extends BaseFragment<PersonalPresenter, PersonalMo
                 bundle.putString(WebViewFragment.WEB_URL, UrlFactory.getBankCardUrl());
                 startActivity(WebViewActivity.class, bundle);
                 break;
-            case R.id.ptHelp:
+            case R.id.money:
                 bundle.putString(WebViewFragment.WEB_URL, UrlFactory.gethelpCenterUrl());
                 startActivity(WebViewActivity.class, bundle);
                 break;
-            case R.id.ptMore:
+            case R.id.logout:
                 startActivity(MoreActivity.class);
                 break;
         }

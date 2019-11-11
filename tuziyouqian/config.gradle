@@ -2,9 +2,9 @@ ext {
 
     host = [
             debug        : "\"http://47.111.176.27:10002/\"",
-            release      : "\"/\"",
-            H5_debug     : "\"http://h5.own.zzbj.xin\"",
-            H5_release   : "\"\"",
+            release      : "\"http://47.111.176.27:10002/\"",
+            H5_debug     : "\"http://h5.360dp.top\"",
+            H5_release   : "\"http://h5.360dp.top\"",
             moxie_debug  : "\"\"",
             moxie_release: "\"\""
 

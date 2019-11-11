@@ -106,7 +106,7 @@ android {
 
         release {
             // 不显示Log
-            buildConfigField "boolean", "LOG_DEBUG", "false"
+            buildConfigField "boolean", "LOG_DEBUG", "true"
             buildConfigField "boolean", "release", "true"
             buildConfigField "String", "API_HOST", "${rootProject.ext.host["release"]}"
             buildConfigField "String", "H5_HOST", "${rootProject.ext.host["H5_release"]}"

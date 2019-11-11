@@ -42,7 +42,7 @@
       android:layout_marginStart="10dp"
       android:layout_marginTop="15dp"
       android:layout_marginEnd="10dp"
-      android:background="@color/bar_grey" />
+      android:background="@color/color_000000" />
 
 
   <LinearLayout
@@ -76,7 +76,7 @@
       android:layout_marginStart="10dp"
       android:layout_marginTop="15dp"
       android:layout_marginEnd="10dp"
-      android:background="@color/bar_grey" />
+      android:background="@color/color_000000" />
 
 
   <LinearLayout
@@ -110,7 +110,7 @@
       android:layout_marginStart="10dp"
       android:layout_marginTop="15dp"
       android:layout_marginEnd="10dp"
-      android:background="@color/bar_grey" />
+      android:background="@color/color_000000" />
 
 
   <LinearLayout
@@ -144,7 +144,7 @@
       android:layout_marginStart="10dp"
       android:layout_marginTop="15dp"
       android:layout_marginEnd="10dp"
-      android:background="@color/bar_grey" />
+      android:background="@color/color_000000" />
 
   <Button
       android:id="@+id/confirm"
