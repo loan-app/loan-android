@@ -6,50 +6,50 @@
     android:background="@color/color_f5f5f5"
     android:orientation="vertical">
 
-    <com.scwang.smartrefresh.layout.SmartRefreshLayout
-        android:id="@+id/mSmart"
+  <com.scwang.smartrefresh.layout.SmartRefreshLayout
+      android:id="@+id/mSmart"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      app:srlDisableContentWhenRefresh="true"
+      app:srlEnableLoadMore="false"
+      app:srlEnableOverScrollDrag="false">
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:srlDisableContentWhenRefresh="true"
-        app:srlEnableLoadMore="false"
-        app:srlEnableOverScrollDrag="false">
+        android:fillViewport="true"
+        android:overScrollMode="never">
 
-        <ScrollView
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="vertical">
+
+        <com.huatu.android.widget.TitleHeaderBar
+            android:id="@+id/mTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title_text="花兔" />
+
+        <com.lib.core.view.UIImageView
+            android:id="@+id/mBanner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/banner"
+            app:proportion="3.13"
+            app:proportionBase="width" />
+
+        <FrameLayout
+            android:id="@+id/mContent"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:fillViewport="true"
-            android:overScrollMode="never">
+            android:layout_below="@+id/mTitle"
+            android:overScrollMode="never" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <com.huatu.android.widget.TitleHeaderBar
-                    android:id="@+id/mTitle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    app:title_text="花兔" />
-
-                <ImageView
-                    android:id="@+id/mBanner"
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:scaleType="centerCrop"
-                    android:src="@mipmap/ic_banner" />
-
-                <FrameLayout
-                    android:id="@+id/mContent"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_below="@+id/mTitle"
-                    android:overScrollMode="never" />
-
-            </LinearLayout>
-        </ScrollView>
+      </LinearLayout>
+    </ScrollView>
 
 
-    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+  </com.scwang.smartrefresh.layout.SmartRefreshLayout>
 
 </LinearLayout>

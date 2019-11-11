@@ -436,4 +436,59 @@
         <attr name="civ_fill_color" format="color" />
         <attr name="civ_circle_background_color" format="color" />
     </declare-styleable>
+
+    <!-- UIImageView -->
+    <declare-styleable name="UIImageView">
+        <attr format="float" name="proportion"/>
+        <attr name="proportionBase">
+            <enum name="width" value="0"/>
+            <enum name="height" value="1"/>
+        </attr>
+        <attr format="dimension"
+            name="radius"/>
+        <attr format="dimension" name="leftTopRadius"/>
+        <attr format="dimension" name="rightTopRadius"/>
+        <attr format="dimension" name="rightBottomRadius"/>
+        <attr format="dimension" name="leftBottomRadius"/>
+        <attr format="dimension"
+            name="borderWidth"/>
+        <attr format="color"
+            name="borderColor"/>
+        <attr format="boolean"
+            name="drawBackground"/>
+        <attr format="boolean"
+            name="clickShadow"/>
+        <attr format="color"
+            name="shadowColor"/>
+        <attr format="color"
+            name="foregroundColor"/>
+        <attr name="scaleType">
+            <enum name="matrix"
+                value="0"/>
+            <enum name="fitXY"
+                value="1"/>
+            <enum name="fitStart"
+                value="2"/>
+            <enum name="fitCenter"
+                value="3"/>
+            <enum name="fitEnd"
+                value="4"/>
+            <enum name="center"
+                value="5"/>
+            <enum name="centerCrop"
+                value="6"/>
+            <enum name="centerInside"
+                value="7"/>
+        </attr>
+        <attr name="drawableType">
+            <enum name="normal"
+                value="0"/>
+            <enum name="oval"
+                value="1"/>
+            <enum name="rounded"
+                value="2"/>
+            <enum name="circle"
+                value="3"/>
+        </attr>
+    </declare-styleable>
 </resources>
