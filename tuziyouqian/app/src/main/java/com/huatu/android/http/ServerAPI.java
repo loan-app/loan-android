@@ -132,7 +132,7 @@ public interface ServerAPI {
    * @return
    */
   @Multipart
-  @POST("upload")
+  @POST("file/upload")
   Flowable<BaseBean<UploadBean>> uploadFile(@Part("token") RequestBody token, @Part MultipartBody.Part file);
 
 

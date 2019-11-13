@@ -9,6 +9,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.baidu.ocr.sdk.OCR;
 import com.baidu.ocr.sdk.OnResultListener;
@@ -61,6 +62,7 @@ public class RealNameFragment extends BaseFragment<CertificatPresenter, Certific
   @BindView(R.id.next)
   Button nextBtn;
 
+
   private static final int REQUEST_CODE_CAMERA = 102;
   private int scanType = 0;//0代表扫描正面 1代表反面
   private String idCardFrontPath;//正面身份证扫描路径
@@ -100,13 +102,10 @@ public class RealNameFragment extends BaseFragment<CertificatPresenter, Certific
   @Override
   public void initPresenter() {
     mPresenter.setVM(this, mModel);
-
   }
 
   @Override
   protected void initView() {
-    idCardFrontPath = FileUtil.getSaveFile(_mActivity).getAbsolutePath();
-    idCardBackPath = FileUtil.getSaveFile(_mActivity).getAbsolutePath();
     mTitle.setLeftOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
@@ -149,62 +148,64 @@ public class RealNameFragment extends BaseFragment<CertificatPresenter, Certific
 
   private void upload() {
     startProgressDialog();
-    Tiny.FileCompressOptions options = new Tiny.FileCompressOptions();
+    UploadManage.upload(mRxManager, _mActivity, idCardFrontPath, new UploadManage.UploadListener() {
+      @Override
+      public void onUploadSuccess(UploadBean bean) {
+        imgCertFront = bean.url;//正面成功后再上传反面
+        uploadCertBack(idCardBackPath);
+      }
+
+      @Override
+      public void onFailed(String code, String msg) {
+        stopProgressDialog();
+        ToastUtil.showShort(msg);
+
+      }
+    });
+    /*Tiny.FileCompressOptions options = new Tiny.FileCompressOptions();
     options.size = 90;
     Tiny.getInstance().source(idCardFrontPath).asFile().withOptions(options).compress(new FileCallback() {
       @Override
       public void callback(boolean isSuccess, String outfile, Throwable t) {
         if (isSuccess) {
-          UploadManage.upload(mRxManager, _mActivity, outfile, new UploadManage.UploadListener() {
-            @Override
-            public void onUploadSuccess(UploadBean bean) {
-              imgCertFront = bean.url;//正面成功后再上传反面
-              uploadCertBack(idCardBackPath);
-            }
 
-            @Override
-            public void onFailed(String code, String msg) {
-              stopProgressDialog();
-              ToastUtil.showShort(msg);
-
-            }
-          });
         } else {
           stopProgressDialog();
           ToastUtil.showShort("图片压缩失败");
         }
       }
-    });
+    });*/
   }
 
   private void uploadCertBack(String idCardBackPath) {
-    Tiny.FileCompressOptions options = new Tiny.FileCompressOptions();
+    UploadManage.upload(mRxManager, _mActivity, idCardBackPath, new UploadManage.UploadListener() {
+      @Override
+      public void onUploadSuccess(UploadBean bean) {
+        imgCertBack = bean.url;//反面上传成功后提交信息
+        saveInfo();
+      }
+
+      @Override
+      public void onFailed(String code, String msg) {
+        stopProgressDialog();
+        ToastUtil.showShort(msg);
+
+      }
+    });
+    /*Tiny.FileCompressOptions options = new Tiny.FileCompressOptions();
     options.size = 90;
     Tiny.getInstance().source(idCardBackPath).asFile().withOptions(options).compress(new FileCallback() {
       @Override
       public void callback(boolean isSuccess, String outfile, Throwable t) {
         if (isSuccess) {
-          UploadManage.upload(mRxManager, _mActivity, outfile, new UploadManage.UploadListener() {
-            @Override
-            public void onUploadSuccess(UploadBean bean) {
-              imgCertBack = bean.url;//反面上传成功后提交信息
-              saveInfo();
-            }
 
-            @Override
-            public void onFailed(String code, String msg) {
-              stopProgressDialog();
-              ToastUtil.showShort(msg);
-
-            }
-          });
         } else {
           stopProgressDialog();
           ToastUtil.showShort("图片压缩失败");
         }
 
       }
-    });
+    });*/
 
 
   }
@@ -257,6 +258,12 @@ public class RealNameFragment extends BaseFragment<CertificatPresenter, Certific
   private void startScan() {
     LogUtils.loge("进来了------");
     Intent intent = new Intent(_mActivity, CameraActivity.class);
+    if (scanType == 0) {
+      idCardFrontPath = FileUtil.getSaveFile(_mActivity).getAbsolutePath();
+    }
+    if (scanType == 1) {
+      idCardBackPath = FileUtil.getSaveFile(_mActivity).getAbsolutePath();
+    }
     intent.putExtra(CameraActivity.KEY_OUTPUT_FILE_PATH, scanType == 0 ? idCardFrontPath : idCardBackPath);
     intent.putExtra(CameraActivity.KEY_CONTENT_TYPE,
         scanType == 0 ? CameraActivity.CONTENT_TYPE_ID_CARD_FRONT : CameraActivity.CONTENT_TYPE_ID_CARD_BACK);
@@ -369,6 +376,34 @@ public class RealNameFragment extends BaseFragment<CertificatPresenter, Certific
     }
   }
 
+  /*private StringBuilder logStr;
+
+  private void logInit() {
+    logStr = new StringBuilder("");
+    logStr.append("正面保存地址：" + idCardFrontPath + "\n" + "反面保存地址：" + idCardBackPath + "\n");
+    log.setText(logStr.toString());
+  }
+
+  private void logPicFornt() {
+    logStr.append("正面文件大小" + FileUtil.getFileSize(idCardFrontPath) + "k");
+    log.setText(logStr.toString());
+  }
+
+  private void logPicBack() {
+    logStr.append("反面文件大小" + FileUtil.getFileSize(idCardBackPath) + "k");
+    log.setText(logStr.toString());
+  }
+
+  private void logSaceFornt(String url) {
+    logStr.append("正面上传地址" + url);
+    log.setText(logStr.toString());
+  }
+
+  private void logSaceBack(String url) {
+    logStr.append("反面上传地址" + url);
+    log.setText(logStr.toString());
+  }*/
+
   @Override
   public void showRealNameInfo(RealNameBean nameBean) {
     if ("1".equals(nameBean.identStatus)) {  //只读，不能做编辑
@@ -387,7 +422,7 @@ public class RealNameFragment extends BaseFragment<CertificatPresenter, Certific
   @Override
   public void saveRealNameSuccess() {
     stopProgressDialog();
-    mRxManager.post(RXMANAFER_CER_NEXT,1);
+    mRxManager.post(RXMANAFER_CER_NEXT, 1);
   }
 
   @Override

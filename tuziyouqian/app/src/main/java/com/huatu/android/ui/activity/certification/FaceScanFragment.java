@@ -11,6 +11,7 @@ import android.widget.RelativeLayout;
 
 import com.baidu.ocr.ui.camera.CameraActivity;
 import com.bumptech.glide.Glide;
+import com.huatu.android.bean.UploadBean;
 import com.huatu.android.utils.FileUtil;
 import com.lib.core.utils.AppUtils;
 import com.lib.core.utils.ImageLoaderUtils;
@@ -98,14 +99,15 @@ public class FaceScanFragment extends BaseFragment<CertificatPresenter, Certific
 
   private void upload(String outfile) {
     UploadManage.saveSace(mRxManager, _mActivity, outfile, new UploadManage.SaveSaceListener() {
-      @Override
-      public void onUploadSuccess() {
+      @Override public void onUploadSuccess() {
         Glide.with(_mActivity)
             .load(outfile)
             .into(ivScan);
         ivScan.setEnabled(false);
         stopProgressDialog();
         ToastUtil.showShort("认证成功！");
+        startActivity(OperatorActivity.class);
+        _mActivity.finish();
       }
 
       @Override
@@ -236,8 +238,8 @@ public class FaceScanFragment extends BaseFragment<CertificatPresenter, Certific
         CameraActivity.CONTENT_TYPE_GENERAL);
     intent.putExtra(CameraActivity.FACING, 1);
     startActivityForResult(intent, CODE_TAKE_PHOTO);*/
-    Intent intent = new Intent(_mActivity,Camera2Activity.class);
-    startActivityForResult(intent,CODE_TAKE_PHOTO);
+    Intent intent = new Intent(_mActivity, Camera2Activity.class);
+    startActivityForResult(intent, CODE_TAKE_PHOTO);
 
   }
 
